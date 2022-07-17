@@ -1,0 +1,51 @@
+.more
+    position: relative
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        width: 941px
+        border: 2px solid #038E00
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 489px
+        border: 2px solid #038E00
+    &__wrapper
+        position: relative
+        display: flex
+        justify-content: space-between
+    &-title
+        font-family: $base-font
+        font-style: normal
+        font-weight: 600
+        font-size: 27px
+        line-height: 33px
+        text-transform: uppercase
+        color: #121212
+    &-text
+        margin-top: 30px
+        font-family: $base-font
+        font-style: normal
+        font-weight: 400
+        font-size: 17px
+        line-height: 21px
+        color: #000000
+    &-item
+        &-left
+            margin-right: 30px
+            padding: 40px 0
+            max-width: 470px
+            & ol 
+                padding-left: 20px
+        &-right
+            max-width: 768px
+            & img 
+                height: 100%
+                width: 768px
+                max-height: 500px

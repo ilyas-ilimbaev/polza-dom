@@ -1,0 +1,131 @@
+*
+    box-sizing: border-box
+body
+    margin: 0
+    padding: 0
+    font-family: $base-font
+    font-size: 17px
+    font-weight: 400
+    line-height: 21px
+    color: $base-color
+    background-color: $base-color
+    &.noscroll
+        overflow: hidden
+
+h1, h2, h3, h4, p, a, ul, ol, li 
+    margin: 0
+    padding: 0
+
+a 
+    text-decoration: none
+    color: $base-color
+
+ul 
+    list-style: none
+img
+    max-width: 100%
+    object-fit: cover
+    object-position: center
+#overlay
+    position: fixed
+    display: none
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    -webkit-transition: .5s
+    transition: .5s
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 6
+    &.active
+        display: block
+.container
+    max-width: 1170px
+    margin: 0 auto
+.icon
+    max-width: inherit
+    width: 100%
+    height: inherit
+    object-fit: cover
+    fill: #ffff
+.item-icon
+    width: 20px
+    height: 20px
+    display: inline-block
+
+.search
+    &-input
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 24px 15px 24px 30px
+        gap: 65px
+        width: 100%
+        max-width: 282px
+        height: 56px
+        background-color: transparent
+        border: 0.4px solid #FFFFFF
+        border-radius: 55px
+        font-family: $base-font
+        font-style: normal
+        font-weight: 400
+        font-size: 17px
+        line-height: 21px
+        /* identical to box height */
+        color: #888888
+        outline: none
+        &-active
+            display: block
+            padding: 10px 24px 10px 20px
+            max-width: 222px
+            height: auto
+    &-button
+        width: 30px
+        height: 30px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        border: none
+        &-active
+            position: absolute
+            right: 21px
+    &-icon
+        width: 20px
+        height: 20px
+.green-text
+    color: #3DAD4F
+.btn
+    &-help-questions
+        position: fixed
+        padding: 24px 23px
+        width: 68px
+        height: 68px
+        display: flex
+        align-items: center
+        justify-content: center
+        top: 70%
+        right: 98px
+        transform: translateY(100%)
+        background: linear-gradient(90deg, #D5D4D0 0%, #D5D4D0 1%, #EEEEEC 31%)
+        border-radius: 55px
+        cursor: pointer
+    &-calc
+        font-family: $base-font
+        font-style: normal
+        font-weight: 400
+        font-size: 17px
+        line-height: 21px
+        color: $black-color
+    &-question-icon
+        width: 29px
+        height: 29px
+
+.section-title
+    font-family: $base-font
+    font-style: normal
+    font-weight: 500
+    font-size: 37px
+    line-height: 45px
+    text-transform: uppercase
+    color: #000000
