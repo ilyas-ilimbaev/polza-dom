@@ -1,1 +1,50 @@
 .footer
+    padding: 40px 
+    background: #2A2A2A
+    &__wrapper
+        display: flex
+        align-items: center
+    &-nav
+    &-list
+        display: flex
+        &-item
+            margin-right: 68px
+            &:last-child
+                margin-right: 0               
+            &-link
+                font-family: $base-font
+                font-weight: 400
+                font-size: 27px
+                line-height: 33px
+                letter-spacing: 0.1em
+                color: $base-color
+    &-info
+        &__info
+            margin: 25px 0
+            text-transform: uppercase
+    &-hours
+        &__item
+            margin-bottom: 40px
+            &:last-child
+                margin-bottom: 0
+    &-maps
+        display: flex
+        align-items: center
+        &::before
+            content: ""
+            display: block
+            margin-right: 10px
+            width: 29px
+            height: 29px
+            background-image: url(../img/maps.png)
+    &-phone
+        font-weight: 500
+        color: #3DAD4F
+
+    &-text
+        font-family: $base-font
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.1em
+        color: #FFFFFF
