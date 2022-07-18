@@ -1,7 +1,15 @@
 .header
     position: relative
-    padding: 12px 0px
+    // padding: 12px 0px
     background-color: #2B2B2B
+    &__wrapper
+        position: fixed
+        right: 0
+        padding: 12px 0px
+        height: 80px
+        width: 100%
+        z-index: 2
+        background-color: #2B2B2B
     &-top
         height: 80px
 
@@ -12,7 +20,7 @@
         &-left, &-right
             display: flex
             align-items: center
-    &-menu
+    &-list
         display: flex
         justify-content: space-between
         &-item
@@ -91,3 +99,26 @@
             flex-direction: column
             justify-content: center
             background: linear-gradient(90.18deg, #222222 3.44%, rgba(43, 43, 43, 0.3) 55.56%, rgba(255, 255, 255, 0.05) 81.76%)
+    
+    &-menu
+        position: fixed
+        padding: 35px 46px
+        width: 554px
+        height: 632px
+        top: 92px
+        right: 0
+        background: #FFFFFF
+        z-index: 2
+        &-list
+        &-item
+            margin-bottom: 20px
+        &-link
+            font-family: $base-font
+            font-weight: 400
+            font-size: 24px
+            line-height: 33px
+            color: $black-color
+        &-line
+            width: 372px
+            height: 1px
+            border: 1px solid $black-color
