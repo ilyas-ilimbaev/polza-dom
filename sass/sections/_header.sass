@@ -104,18 +104,22 @@
         position: fixed
         padding: 35px 46px
         width: 554px
-        height: 632px
-        top: 92px
+        height: 100%
+        top: 80px
         right: 0
-        background: #FFFFFF
+        background: #FFFFFFE8
         z-index: 2
+        border-left: 2px solid gray
+        border-bottom: 2px solid gray
+        transform: translateX(100%)
+        transition: .5s
         &-list
         &-item
             margin-bottom: 20px
         &-link
             font-family: $base-font
             font-weight: 400
-            font-size: 24px
+            font-size: 27px
             line-height: 33px
             color: $black-color
         &-line
