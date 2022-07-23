@@ -1,0 +1,135 @@
+.catalog
+    padding: 70px 0
+    &-content
+        margin-top: 60px
+        display: flex
+        &__filter-group
+            margin-right: 30px
+            padding-right: 64px
+            width: 371px
+            border-right: 1px solid #000000
+        &__list-project
+            margin-right: -30px
+            display: flex
+            flex-wrap: wrap
+.list-project
+    &__project-card
+        position: relative
+        margin: 0px 30px 30px 0px
+        width: 370px
+        height: 322px
+        &:nth-child(2n+2)
+            margin-right: 0
+            
+.project-card
+    &__img-link-project
+        display: inline-block
+    &__img
+        width: 370px
+        height: 322px
+    &__hover-project-name
+        position: absolute
+        bottom: 0
+        left: 0
+        padding: 20px 15px
+        width: 100%
+        font-family: $base-font
+        font-weight: 400
+        font-size: 15px
+        line-height: 18px
+        text-align: center
+        color: #fff
+        background-color: #4E6F9FD4
+        transition: 0.5s
+        opacity: 0
+        cursor: pointer
+
+.list-project__project-card:hover .project-card__hover-project-name
+    opacity: 100%
+.filter
+    &-group
+        margin-bottom: 30px
+        padding-bottom: 30px
+        border-bottom: 0.7px solid #000000
+        &:last-child
+            padding-bottom: none
+            border: none
+        &__cost-filter
+        &__title
+            margin-bottom: 25px
+            font-family: $base-font
+            font-weight: 500
+            font-size: 27px
+            line-height: 33px
+            color: $black-color
+        &__cost-range
+        &__min-range, &__max-range
+            width: 100%
+            max-width: 124px
+        &__min-range
+            margin-right: 58px
+        &__max-range
+        &__form
+            margin-top: 25px
+            display: flex
+            flex-wrap: wrap
+            &-field
+                padding: 6px 13px
+                font-family: $base-font
+                font-weight: 400
+                font-size: 15px
+                line-height: 18px
+                text-align: center
+                color: #393939
+                border: 0.6px solid #000000
+                border-radius: 5px
+        &__form-label
+            position: relative
+            margin-right: 25px
+            margin-bottom: 25px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 0.6px solid #000000
+            border-radius: 5px
+            overflow: hidden
+        &__real-radio
+            position: absolute
+            width: 100%
+            height: 100%
+            opacity: 0
+        &__label-text
+            padding: 4px 13px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            text-align: center
+            color: #393939
+        &__range-line
+            position: relative
+            width: 307px
+            height: 4px
+            background-color:rgba(46, 95, 60, 0.5)
+.range-line
+    &__slide-rail
+        position: absolute
+        width: 100%
+        height: 4px
+        background-color: #2E5F3C
+    &__min, &__max
+        position: absolute
+        top: 50%
+        width: 18px
+        height: 18px
+        transform: translateY(-50%)
+        background: #2E5F3C
+        border-radius: 50%
+        cursor: pointer
+    &__min
+        left: 0
+    &__max
+        right: 0
+.filter-group__real-radio:checked + .filter-group__label-text
+    background-color: #2E5F3C
+    color: #fff

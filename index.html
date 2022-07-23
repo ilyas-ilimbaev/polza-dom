@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,26 +19,26 @@
                 <div class="header-top">
                     <div class="header-nav">
                         <div class="header-nav-left">
-                            <div class="logo">
+                            <a href="index.html" class="logo">
                                 <span class="logo-text">
                                     <span class="green-text">ПОЛЬЗА</span> ДОМ
                                 </span>
                                 <svg class="icon logo-icon">
                                     <use xlink:href="img/sprite.svg#logo"></use>
                                 </svg>
-                            </div>
+                            </a>
                             <ul class="header-list">
                                 <li class="header-list-item">
-                                    <a href="" class="header-list-link">Каталог</a>
+                                    <a href="catalog.html" class="header-list-link">Каталог</a>
                                 </li>
                                 <li class="header-list-item">
-                                    <a href="" class="header-list-link">Услуги</a>
+                                    <a href="services" class="header-list-link">Услуги</a>
                                 </li>
                                 <li class="header-list-item">
                                     <a href="" class="header-list-link">О компании</a>
                                 </li>
                                 <li class="header-list-item">
-                                    <a href="" class="header-list-link">Проектирование</a>
+                                    <a href="uslugi/proektirovanie.html" class="header-list-link">Проектирование</a>
                                 </li>
                                 <li class="header-list-item">
                                     <a href="" class="header-list-link">Этапы работ</a>
@@ -68,10 +69,10 @@
                     <div class="header-menu">
                         <ul class="header-menu-list">
                             <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Каталог</a>
+                                <a href="catalog.html" class="header-menu-link">Каталог</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Услуги</a>
+                                <a href="services.html" class="header-menu-link">Услуги</a>
                             </li>
                             <li class="header-menu-item">
                                 <a href="" class="header-menu-link">О компании</a>
@@ -80,10 +81,10 @@
                                 <a href="" class="header-menu-link">Этапы строительства</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Проектирование</a>
+                                <a href="uslugi/proektirovanie.html" class="header-menu-link">Проектирование</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Наши работы</a>
+                                <a href="projects.html" class="header-menu-link">Наши работы</a>
                             </li>
                             <li class="header-menu-item">
                                 <a href="" class="header-menu-link">Ипотека и кредит</a>
@@ -99,7 +100,7 @@
                                 <a href="" class="header-menu-link">Вопрос - ответ</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Вход. Регистрация</a>
+                                <a href="#" class="header-menu-link link-login">Вход. Регистрация</a>
                             </li>
                         </ul>
                     </div>
@@ -361,6 +362,7 @@
                     <a href="" class="socialNetworks-link">Войти с помощью Вконтакте</a>
                 </div>
             </div>
+            <div class="popup-link-register">Создать новый аккаунт</div>
         </div>
     </div>
     <div class="popup popup-register">
@@ -423,5 +425,8 @@
             <img src="img/btn-question-icon.png" alt="Рассчитать стоимость" srcset="">
         </div>
     </div> -->
+    <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
+    <script src="libs/jquery.validate/jquery.validate.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

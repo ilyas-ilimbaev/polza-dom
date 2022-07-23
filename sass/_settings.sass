@@ -17,6 +17,7 @@ h1, h2, h3, h4, p, a, ul, ol, li
     padding: 0
 input, button, textarea
     outline: none
+    cursor: pointer
 a 
     text-decoration: none
     color: $base-color
@@ -37,13 +38,16 @@ img
     -webkit-transition: .5s
     transition: .5s
     background-color: rgba(0, 0, 0, 0.5)
-    z-index: 6
+    z-index: 0
     &.active
         display: block
 .container
     max-width: 1170px
     margin: 0 auto
-// .icon
+.icon
+    width: inherit
+    height: inherit
+    object-fit: contain
 //     max-width: inherit
 //     width: 100%
 //     height: inherit
@@ -134,10 +138,10 @@ img
 .logo
     position: relative
     width: 124px
-    height: 57px
+    height: 63px
     &-text
         position: absolute
-        bottom: 6px
+        top: 35px
         right: -2px
         font-family: $base-font
         font-style: normal
