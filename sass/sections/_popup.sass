@@ -82,8 +82,6 @@
             padding: 30px 13px 15px 13px
             width: 333px
             height: 413px
-            display: flex
-            align-items: end
             background: #F7F7F7
             border-radius: 20px
             overflow: hidden
@@ -97,8 +95,13 @@
             font-size: 20px
             line-height: 24px
             color: $black-color
-        &-1, &-2
-            display: block
+        &-subtitle
+            margin: 15px 0
+            font-family: $base-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            color: $black-color
         &-form
     &-link
         &-register
@@ -142,7 +145,10 @@
         &::before
             transform: rotate(135deg)
         &::after
-            transform: rotate(-135deg)         
+            transform: rotate(-135deg)   
+    &-label
+        &__style-house
+            display: flex      
 
 
 .socialNetworks
@@ -179,6 +185,10 @@
 .calculate
     &-cost
         &-item
+            display: flex
+            flex-direction: column
+            &-2, &-3, &-4, &-5, &-6
+                display: none
 .form
     &-item
         &__label
@@ -194,15 +204,58 @@
             color: $black-color
             border: 0.4px solid $black-color
             border-radius: 55px
-            
+            &-input
+                padding: 0
+                margin-top: 25px
+            &-text
+                display: block
+                padding: 3px 0
+                font-family: $base-font
+                font-weight: 400
+                font-size: 13px
+                line-height: 16px
+                text-align: center
+                color: $black-color
+            &-img
+                position: relative
+                margin: 15px 30px 20px 0px
+                width: 125px
+                max-height: 139px
+                display: flex
+                flex-direction: column
+                text-align: center
+                border: 0.3px solid #858585
+        &__item-button
+            margin-top: 25px
+            padding: 15px 72px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 21px
+            line-height: 26px
+            text-transform: uppercase
+            color: $base-color
+            background-color: #2D7439
+            border: none
+            border-radius: 55px
+        &__input
+            width: 100%
+            padding: 17px 50px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color:#808080
+            border: none
+            border-radius: 55px
         &__real
             &-radio
-                width: 20px
-                height: 20px
+                width: 100%
+                height: 100%
                 position: absolute
+                left: 0
+                top: 0
+                margin: 0 auto
                 z-index: 2
-                left: 25px
-                top: 15.5px
                 opacity: 0
                 cursor: pointer
 
@@ -227,12 +280,23 @@
                     background-color: #2D7439
                     border-radius: 50%
                     display: none
+                &-img
+                    width: 125px
+                    height: 110px
         &__question-number
         &__button-wrapper
+            position: absolute
             margin-top: 40px
+            padding: 15px
+            width: 100%
+            // height: 63px
+            bottom: 0
+            left: 0
             display: flex
             justify-content: space-between
             align-items: center
+            background-color: #5A5858
+            z-index: -1
         &__button-prev
             padding: 16px 9px
             width: 33px
@@ -255,15 +319,11 @@
             background-color: transparent
             border: 1px solid #FFFFFF
             border-radius: 20px
-        &-bottom
+        &__icon-input
             position: absolute
-            width: 100%
-            height: 63px
-            bottom: 0
-            left: 0
-            background-color: #5A5858
-            z-index: -1
-
+            left: 18px
+            width: 21px
+            height: 21px
 
 .question-number
     font-family: 'Open Sans'
@@ -282,9 +342,14 @@
         margin-left: 20px
 .form-item__real-radio:checked + .form-item__custom-radio::before
     display: block
+
+.form-item__real-radio:checked + .form-item__label-text
+    background-color: #2D7439
+    color: $base-color
 .arrow-prev
     width: 16px
     height: 8px
+    fill: #949494
 .arrow-next
     width: 30px
     height: 16px
