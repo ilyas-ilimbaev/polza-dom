@@ -53,6 +53,9 @@
     </section>
     <?php
         include ('../blocks/help-question.php');
+    ?>       
+    <?php
+        include ('../blocks/footer.php');
     ?>
     <?php
         include ('../blocks/popups.php');

@@ -230,6 +230,9 @@
         </div>
     </section>
     <?php
+        include ('blocks/footer.php');
+    ?>
+    <?php
         include ('blocks/popups.php');
     ?>
     <?php

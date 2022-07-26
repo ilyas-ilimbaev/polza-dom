@@ -117,6 +117,9 @@
     </section>
     <?php
         include ('blocks/popups.php');
+    ?>  
+    <?php
+        include ('blocks/footer.php');
     ?>
     <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
     <script src="libs/jquery.validate/jquery.validate.js"></script>

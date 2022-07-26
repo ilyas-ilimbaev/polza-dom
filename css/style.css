@@ -1527,6 +1527,16 @@ img {
   fill: #fff;
 }
 
+.footer-text, .footer-hours {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
 .footer {
   padding: 40px;
   background: #2A2A2A;
@@ -1553,41 +1563,64 @@ img {
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
+.footer-info {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 .footer-info__info {
   margin: 25px 0;
   text-transform: uppercase;
 }
-.footer-hours__item {
-  margin-bottom: 40px;
+.footer-item {
+  margin-right: 70px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.footer-hours__item:last-child {
+.footer-item:last-child {
+  margin-right: 0px;
+}
+.footer-item__hours > .footer-hours {
   margin-bottom: 0;
 }
-.footer-maps {
+.footer-item__maps {
+  margin-top: 25px;
   display: flex;
   align-items: center;
 }
-.footer-maps::before {
+.footer-item__maps::before {
   content: "";
   display: block;
   margin-right: 10px;
-  width: 29px;
+  width: 21px;
   height: 29px;
-  background-image: url(../img/maps.png);
+  background: no-repeat center/cover url(../img/maps.png);
+}
+.footer-item__maps > .footer-text {
+  margin-bottom: 0;
+}
+.footer-hours:last-child {
+  margin-bottom: 0;
 }
 .footer-phone {
   font-weight: 500;
   color: #3DAD4F;
 }
 .footer-text {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.1em;
-  color: #FFFFFF;
+  margin-bottom: 25px;
 }
-
+.footer-link {
+  color: #3DAD4F;
+}
+.footer-left {
+  display: flex;
+  max-width: 688px;
+}
+.footer-left > .footer-item > .footer-text:last-child {
+  margin-bottom: 0;
+}
 /*дополнительные страницы*/
 .detailed-info-services {
   position: relative;

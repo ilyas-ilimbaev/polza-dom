@@ -1,3 +1,11 @@
+%footer-text
+    display: inline-block
+    font-family: $base-font
+    font-weight: 400
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: 0.1em
+    color: #FFFFFF
 .footer
     padding: 40px 
     background: #2A2A2A
@@ -20,32 +28,52 @@
                 letter-spacing: 0.1em
                 color: $base-color
     &-info
+        margin-top: 30px
+        display: flex
+        justify-content: space-between
         &__info
             margin: 25px 0
             text-transform: uppercase
-    &-hours
-        &__item
-            margin-bottom: 40px
-            &:last-child
-                margin-bottom: 0
-    &-maps
+    &-item
+        margin-right: 70px
+        max-width: 300px
         display: flex
-        align-items: center
-        &::before
-            content: ""
-            display: block
-            margin-right: 10px
-            width: 29px
-            height: 29px
-            background-image: url(../img/maps.png)
+        flex-direction: column
+        justify-content: space-between
+        &:last-child
+            margin-right: 0px
+        &__hours > .footer-hours
+            margin-bottom: 0
+        &__maps
+            margin-top: 25px
+            display: flex
+            align-items: center
+            &::before
+                content: ""
+                display: block
+                margin-right: 10px
+                width: 21px
+                height: 29px
+                background: no-repeat center/cover url(../img/maps.png)
+            & > .footer-text
+                margin-bottom: 0
+    &-hours
+        @extend %footer-text
+        &:last-child
+            margin-bottom: 0
     &-phone
         font-weight: 500
         color: #3DAD4F
-
     &-text
-        font-family: $base-font
-        font-weight: 400
-        font-size: 20px
-        line-height: 24px
-        letter-spacing: 0.1em
-        color: #FFFFFF
+        margin-bottom: 25px
+        @extend %footer-text
+    &-link
+        color: #3DAD4F
+    &-left
+        display: flex
+        max-width: 688px
+        & > .footer-item > .footer-text:last-child
+            margin-bottom: 0
+
+    &-right
+

@@ -122,9 +122,12 @@
     </section>
     <?php
         include ('../blocks/help-question.php');
+    ?>       
+    <?php
+        include ('../blocks/footer.php');
     ?>
     <?php
-        include ('blocks/popups.php');
+        include ('../blocks/popups.php');
     ?>
     <script src="/libs/swiper-bundle/swiper-bundle.min.js"></script>
     <script src="/libs/jquery.validate/jquery.validate.js"></script>
