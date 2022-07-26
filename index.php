@@ -11,115 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header__wrapper">
-            <div class="container">
-                <div class="header-top">
-                    <div class="header-nav">
-                        <div class="header-nav-left">
-                            <a href="index.html" class="logo">
-                                <span class="logo-text">
-                                    <span class="green-text">ПОЛЬЗА</span> ДОМ
-                                </span>
-                                <svg class="icon logo-icon">
-                                    <use xlink:href="img/sprite.svg#logo"></use>
-                                </svg>
-                            </a>
-                            <ul class="header-list">
-                                <li class="header-list-item">
-                                    <a href="catalog.html" class="header-list-link">Каталог</a>
-                                </li>
-                                <li class="header-list-item">
-                                    <a href="services" class="header-list-link">Услуги</a>
-                                </li>
-                                <li class="header-list-item">
-                                    <a href="" class="header-list-link">О компании</a>
-                                </li>
-                                <li class="header-list-item">
-                                    <a href="uslugi/proektirovanie.html" class="header-list-link">Проектирование</a>
-                                </li>
-                                <li class="header-list-item">
-                                    <a href="" class="header-list-link">Этапы работ</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="header-nav-right">
-                            <a href="#" class="user-login-link item-icon link-login">
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#user-profile"></use>
-                                </svg>
-                            </a>
-                            <div class="header-search-item">
-                                <form action="" class="header-search-form">
-                                    <input type="search" name="s" maxlength="16" id="search-input" class="search-input" placeholder="Поиск по сайту">
-                                    <button id="search-button" class="search-button header-top-item-search" type="submit">
-                                        <svg class="icon search-icon">
-                                            <use xlink:href="img/sprite.svg#search-icon"></use>
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                            <div class="toggle-menu">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-menu">
-                        <ul class="header-menu-list">
-                            <li class="header-menu-item">
-                                <a href="catalog.html" class="header-menu-link">Каталог</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="services.html" class="header-menu-link">Услуги</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">О компании</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Этапы строительства</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="uslugi/proektirovanie.html" class="header-menu-link">Проектирование</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="ourworks.html" class="header-menu-link">Наши работы</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Ипотека и кредит</a>
-                            </li>
-                            <li class="header-menu-item header-menu-line"></li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Отзывы</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Контакты</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="" class="header-menu-link">Вопрос - ответ</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a href="#" class="header-menu-link link-login">Вход. Регистрация</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>        
-        <div class="header-content">
-            <!-- <div class="header-content__img">
-                <img src="img/header-home.png" alt="" srcset="">
-            </div> -->
-            <div class="header-content__desc">
-                <div class="header-text-wrapper">
-                    <h1 class="header-title">строительство домов <span class="green-text">под ключ</span></h1>
-                    <p class="header-text">Качественное строительство домов по доступной стоимости</p>
-                    <a href="" class="header-calc-link">Рассчитать стоимость</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php
+        include ('blocks/header.php');
+    ?>
     <section class="benefits">
         <div class="container">
             <div class="benefits__wrapper">
@@ -332,56 +229,12 @@
             </div>
         </div>
     </section>
-    <div class="popup popup-login">
-        <div class="popup-wrapper">
-            <span class="popup-title">ДОБРО ПОЖАЛОВАТЬ</span>
-            <form action="" class="popup-form auth-form">
-                <input type="email" name="email" placeholder="Введите ваш e-mail" class="popup-form__field">
-                <div class="popup-form__item">
-                    <input type="password" name="password" placeholder="Введите пароль" class="popup-form__field">
-                    <a class="form-reminder-show-password-link" href="">Забыли пароль?</a>
-                </div>
-                <button class="popup-form__btn" type="submit">войти</button>
-            </form>
-            <div class="popup-line"></div>
-            <div class="popup-socialNetworks">
-                <div class="socialNetworks-item socialNetworks-google">
-                    <div class="socialNetworks-icon">
-                        <svg class="icon search-icon">
-                            <use xlink:href="img/sprite.svg#google-icon"></use>
-                        </svg>
-                    </div>
-                    <a href="" class="socialNetworks-link">Войти с помощью Google</a>
-                </div>
-                <div class="socialNetworks-item socialNetworks-vk">
-                    <div class="socialNetworks-icon">
-                        <svg class="icon search-icon">
-                            <use xlink:href="img/sprite.svg#vk-icon"></use>
-                        </svg>
-                    </div>
-                    <a href="" class="socialNetworks-link">Войти с помощью Вконтакте</a>
-                </div>
-            </div>
-            <div class="popup-link-register">Создать новый аккаунт</div>
-        </div>
-    </div>
-    <div class="popup popup-register">
-        <div class="popup-wrapper">
-            <span class="popup-title">РЕГИСТРАЦИЯ</span>
-            <form action="" class="popup-form auth-form">
-                <input type="text" name="name" placeholder="Введите имя" class="popup-form__field">
-                <input type="email" name="email" placeholder="Введите ваш e-mail" class="popup-form__field">
-                <input type="password" name="password" placeholder="Введите пароль" class="popup-form__field">
-                <div class="popup-form__item">
-                    <input type="text" name="name" placeholder="Введите пароль" class="popup-form__field">
-                    <a class="form-reminder-show-password-link" href="">Повторите пароль</a>
-                </div>
-                <input type="tel" name="tel" placeholder="Введите номер телефона" class="popup-form__field">
-                <button class="popup-form__btn" type="submit">регистрация</button>
-            </form>
-        </div>
-    </div>
-    <div id="overlay" class="overlay"></div>
+    <?php
+        include ('blocks/popups.php');
+    ?>
+    <?php
+        include ('blocks/calculate-count.php');
+    ?>
     <!-- <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
@@ -428,5 +281,58 @@
     <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
     <script src="libs/jquery.validate/jquery.validate.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
+    <script>
+        let doc = document
+        
+        doc.querySelector('.reviews-form__submit').addEventListener("click", ()=>{
+
+            let mark = "Оценка"
+            let report = "Мой отзыв"
+            let name = "Владимир"
+            let email = "email@mail.ru"
+
+            ajaxPost("/send.php", `feedbackform=true&mark=${mark}&report=${report}&name=${name}&email=${email}`, (result)=>{
+            result = JSON.parse(result)
+            if (result['success']){
+                alert("Отзыв отправлен!")
+            } else {
+                alert("Произошла ошибка при отправке отзыва!")
+                alert(result['textError'])
+            }
+            })
+        })
+        
+
+
+        function ajaxPost(url, parameters, callback) {
+        // parameters = encodeURIComponent(parameters)
+        if (parameters === false || parameters === null || parameters === undefined) {
+            parameters = "";
+        }
+        var request = new XMLHttpRequest();
+        request.open('POST', url, true);
+        request.addEventListener('readystatechange', function () {
+            if ((request.readyState == 4) && (request.status == 200)) {
+            callback(request.responseText)
+            } else {
+            if (request.readyState == 0) {
+                // Request not initialized
+                console.log('Request not initialized')
+            }
+            if (request.status == 403) {
+                // Forbidden
+                console.log('Forbidden')
+            }
+            if (request.status == 404) {
+                // Not Found
+                console.log('Not Found')
+            }
+            }
+        });
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        request.send(parameters);
+        }
+    </script>
 </body>
 </html>
