@@ -53,7 +53,7 @@
         <label for="" class="form-item__label-img">
         <img src="img/modern-house.png" alt="" class="form-item__custom-radio-img">
         <input type="radio" name="area-house" class="form-item__real-radio"/>
-        <div class="form-item__label-text">2 этаж</div>
+        <div class="form-item__label-text">2 этажа</div>
         </label>
     </div>
     </div>

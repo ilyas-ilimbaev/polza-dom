@@ -10,6 +10,8 @@
     padding: 40px 
     background: #2A2A2A
     &__wrapper
+        &-mob
+            display: none
     &-nav
         display: flex
         align-items: flex-start
@@ -74,6 +76,14 @@
         max-width: 688px
         & > .footer-item > .footer-text:last-child
             margin-bottom: 0
-
+    &-search
+        &-item
+            & > .search-form > .search-button
+                position: absolute
+                right: 15px
     &-right
-
+        display: flex
+        flex-direction: column
+        align-items: end
+        & .footer-item
+            margin-right: 0px

@@ -37,7 +37,7 @@
                             </svg>
                         </a>
                         <div class="header-search-item">
-                            <form action="" class="header-search-form">
+                            <form action="" class="search-form">
                                 <input type="search" name="s" maxlength="16" id="search-input" class="search-input" placeholder="Поиск по сайту">
                                 <button id="search-button" class="search-button header-top-item-search" type="submit">
                                     <svg class="icon search-icon">
