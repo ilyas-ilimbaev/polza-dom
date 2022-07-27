@@ -60,6 +60,97 @@
             </div>
         </div>
     </section>
+    <section class="top-houses">
+        <div class="container">
+            <div class="top-house__wrapper">
+                <h2 class="top-house__title section-title">ЛУЧШИЕ ПРОЕКТЫ</h2>
+                <div class="top-house__slide-container">
+                    <div class="swiper top-house__swiper">
+                        <div class="swiper-wrapper top-house__wrapper-slide">
+                            <div class="top-house__slide swiper-slide">
+                                <img src="/img/house-project-12.png" alt="Проект дома №12 из газобетона" class="top-house__slide-img">
+                                <div class="top-house__slide-content">
+                                    <h4 class="top-house__slide-title">Проект дома №12 из газобетона</h4>
+                                    <div class="top-house__slide-desc">
+                                        <p class="top-house__slide-text top-house__house-floor">Колличество этажей: 2</p>
+                                        <p class="top-house__slide-text top-house__house-area">126 кв.м.</p>
+                                        <p class="top-house__slide-text top-house__house-price-">от 1 170 000 руб.</p>
+                                    </div>
+                                    <a href="" class="top-house__slide-link-more top-house__slide-text">
+                                        Подробнее
+                                        <span class="button-next">
+                                            <svg class="icon arrow-next">
+                                                <use xlink:href="img/sprite.svg#arrow-next"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>                    
+                            <div class="top-house__slide swiper-slide">
+                                <img src="/img/house-project-19.png" alt="Проект дома №19 из кирпича" class="top-house__slide-img">
+                                <div class="top-house__slide-content">
+                                    <h4 class="top-house__slide-title">Проект дома №19 из кирпича</h4>
+                                    <div class="top-house__slide-desc">
+                                        <p class="top-house__slide-text top-house__house-floor">Колличество этажей: 2</p>
+                                        <p class="top-house__slide-text top-house__house-area">168 кв.м.</p>
+                                        <p class="top-house__slide-text top-house__house-price-">от 1 790 000 руб.</p>
+                                    </div>
+                                    <a href="" class="top-house__slide-link-more top-house__slide-text">
+                                        Подробнее
+                                        <span class="button-next">
+                                            <svg class="icon arrow-next">
+                                                <use xlink:href="img/sprite.svg#arrow-next"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>                    
+                            <div class="top-house__slide swiper-slide">
+                                <img src="/img/house-project-16.png" alt="Проект дома №16 из газобетона" class="top-house__slide-img">
+                                <div class="top-house__slide-content">
+                                    <h4 class="top-house__slide-title">Проект дома №16 из газобетона</h4>
+                                    <div class="top-house__slide-desc">
+                                        <p class="top-house__slide-text top-house__house-floor">Колличество этажей: 2</p>
+                                        <p class="top-house__slide-text top-house__house-area">220 кв.м.</p>
+                                        <p class="top-house__slide-text top-house__house-price-">от 2 680 000 руб.</p>
+                                    </div>
+                                    <a href="" class="top-house__slide-link-more top-house__slide-text">
+                                        Подробнее
+                                        <span class="button-next">
+                                            <svg class="icon arrow-next">
+                                                <use xlink:href="img/sprite.svg#arrow-next"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>                    
+                            <div class="top-house__slide swiper-slide">
+                                <img src="/img/house-project-26.png" alt="Проект дома №26 деревянный дом" class="top-house__slide-img">
+                                <div class="top-house__slide-content">
+                                    <h4 class="top-house__slide-title">Проект дома №26 деревянный дом</h4>
+                                    <div class="top-house__slide-desc">
+                                        <p class="top-house__slide-text top-house__house-floor">Колличество этажей: 3</p>
+                                        <p class="top-house__slide-text top-house__house-area">190 кв.м.</p>
+                                        <p class="top-house__slide-text top-house__house-price-">от 2 320 000 руб.</p>
+                                    </div>
+                                    <a href="" class="top-house__slide-link-more top-house__slide-text">
+                                        Подробнее
+                                        <span class="button-next">
+                                            <svg class="icon arrow-next">
+                                                <use xlink:href="img/sprite.svg#arrow-next"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="calculation">
         <div class="calculation__wrapper">
             <div class="calculation-tabs">
@@ -238,43 +329,6 @@
     <?php
         include ('blocks/calculate-count.php');
     ?>
-    <!-- <footer class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <div class="footer-left">
-                    <div class="logo">
-                        <span class="logo-text">
-                            <span class="green-text">ПОЛЬЗА</span> ДОМ
-                        </span>
-                        <svg class="icon logo-icon">
-                            <use xlink:href="img/sprite.svg#logo"></use>
-                        </svg>
-                    </div>
-                    <div class="footer-info">
-                        <div class="footer-info__info footer-text">©2009 - 2022, ООО СК «ПОЛЬЗА ДОМ»</div>
-                        <div class="footer-info__address footer-text">Ул. Ленина, дом 92, офис 338, этаж 4</div>
-                        <div class="footer-info__hours">
-                            <span class="footer-hours__item footer-text">Пн – Пт 10:00-19:00</span>
-                            <span class="footer-hours__item footer-text">Сб 10:00-18:00</span>
-                        </div>
-                        <div class="footer-maps">
-                            <a href="" class="footer-text">Смотреть на карте</a>
-                        </div>
-                        <a href="tel:+7 (495) 818-23-15" class="footer-phone footer-text">+7 (495) 818-23-15</a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <ul class="footer-list">
-                        <li class="footer-list-item"><a href="" class="footer-list-item-link">Компания</a></li>
-                        <li class="footer-list-item"><a href="" class="footer-list-item-link">Каталог</a></li>
-                        <li class="footer-list-item"><a href="" class="footer-list-item-link">Контакты</a></li>
-                        <li class="footer-list-item"><a href="" class="footer-list-item-link">Услуги</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> -->
     <!-- <div class="btn-help-questions">
         <a class="btn-calc">Рассчитать стоимость</a>
         <div class="btn-question-icon">
@@ -285,6 +339,7 @@
     <script src="libs/jquery.validate/jquery.validate.js"></script>
     <script src="js/main.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/usset-swiper.js"></script>
     <script>
         let doc = document
         

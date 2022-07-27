@@ -135,9 +135,9 @@
     </button>
     <button class="form-item__button-next">Далее
         <span class="button-next">
-        <svg class="icon arrow-next">
-            <use xlink:href="img/sprite.svg#arrow-next"></use>
-        </svg>
+            <svg class="icon arrow-next">
+                <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
         </span>
     </button>
     </div>

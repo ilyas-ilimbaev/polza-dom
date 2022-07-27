@@ -1,0 +1,45 @@
+.stages-work
+    position: relative
+    padding: 80px 0
+    &__wrapper
+    &__content
+        display: flex
+        &-img
+            position: absolute
+            right: 0
+            bottom: 0
+            left: 0
+            display: flex
+            & img 
+                flex: 0 0 100%
+    &__card-wrapper
+        margin-top: 70px
+        width: 660px
+        display: flex
+        flex-wrap: wrap
+    &__card
+        margin-right: 30px
+        margin-bottom: 30px
+        padding: 20px 6px
+        width: 200px
+        // height: 170px
+        text-align: center
+        border: 1px solid #038E00
+        &:nth-child(3n+3)
+            margin-right: 0
+        &-title
+            font-family: 'Open Sans'
+            font-weight: 700
+            font-size: 37px
+            line-height: 50px
+            text-transform: uppercase
+            color: #038E00
+
+        &-text
+            margin-top: 15px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+            color: $black-color

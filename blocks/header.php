@@ -26,7 +26,7 @@
                                 <a href="/uslugi/proektirovanie.php" class="header-list-link">Проектирование</a>
                             </li>
                             <li class="header-list-item">
-                                <a href="/" class="header-list-link">Этапы работ</a>
+                                <a href="/stages-work.php" class="header-list-link">Этапы работ</a>
                             </li>
                         </ul>
                     </div>
