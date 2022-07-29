@@ -151,50 +151,98 @@
             </div>
         </div>
     </section>
-    <section class="calculation">
-        <div class="calculation__wrapper">
-            <div class="calculation-tabs">
-                <div class="calculation-tabs__item active">Рассчитать стоимость дома</div>
-                <div class="calculation-tabs__item">Рассчитать стоимость ипотеки</div>
-                <div class="calculation-tabs__item">Рассчитать стоимость услуг</div>
-                <div class="calculation-tabs__item">Рассчитать смету на строительство дома</div>
-                <div class="calculation-tabs__item">Акции</div>
+    <section class="calc">
+        <div class="calc__wrapper">
+            <div class="calc-tabs">
+                <div class="calc-tabs__item" date-calc="house">Рассчитать стоимость дома</div>
+                <div class="calc-tabs__item" date-calc="mortgage">Рассчитать стоимость ипотеки</div>
+                <div class="calc-tabs__item" date-calc="services">Рассчитать стоимость услуг</div>
+                <div class="calc-tabs__item" date-calc="estimate">Рассчитать смету на строительство дома</div>
+                <div class="calc-tabs__item" date-calc="stock">Акции</div>
             </div>
-            <div class="calculation-content">
-                <h3 class="calculation-content__title">Какой дом необходимо построить?</h3>
-                <div class="calculation-content__items-wrapper">
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-Brick-house.png" alt="Дом из кирпича" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из кирпича</a>
+            <div class="calc-content">
+                <h3 class="calc-content__title">Какой дом необходимо построить?</h3>
+                <div class="calc-content__wrapper">
+                    <div class="calc-content__container-slide">
+                        <div class="calc-content__cards-wrapper calc-content__house-types">
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Brick-house.png" alt="Дом из кирпича" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из кирпича</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Timber-house.png" alt="Дом из бруса" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из бруса</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Log-house.png" alt="Дом из бревна" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из бревна</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-House-of-tiles.png" alt="Дом из панелей" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из панелей</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Block-house.png" alt="Дом из блоков" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из блоков</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Frame-house.png" alt="Каркасный дом" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Каркасный дом</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-House-carriage.png" alt="Дом из лафета" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из лафета</a>
+                            </label>
+                        </div>
+                        <div class="calc-content__cards-wrapper calc-content__calc-mortgage">
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Brick-house.png" alt="Дом из кирпича" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из кирпича</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Timber-house.png" alt="Дом из бруса" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из бруса</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Log-house.png" alt="Дом из бревна" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из бревна</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-House-of-tiles.png" alt="Дом из панелей" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из панелей</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Block-house.png" alt="Дом из блоков" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из блоков</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-Frame-house.png" alt="Каркасный дом" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Каркасный дом</a>
+                            </label>
+                            <label class="calc-content__card">
+                                <img src="img/sectionCalculate-img-House-carriage.png" alt="Дом из лафета" class="calc-content__img">
+                                <input type="radio" name="house-of-brick" class="calc-content__input-choice">
+                                <a href="" class="calc-content__card-link">Дом из лафета</a>
+                            </label>
+                        </div>
                     </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-Timber-house.png" alt="Дом из бруса" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из бруса</a>
-                    </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-Log-house.png" alt="Дом из бревна" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из бревна</a>
-                    </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-House-of-tiles.png" alt="Дом из панелей" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из панелей</a>
-                    </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-Block-house.png" alt="Дом из блоков" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из блоков</a>
-                    </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-Frame-house.png" alt="Каркасный дом" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Каркасный дом</a>
-                    </div>
-                    <div class="calculation-content__item">
-                        <img src="img/sectionCalculate-img-House-carriage.png" alt="Дом из лафета" class="calculation-content__img">
-                        <a href="" class="calculation-content__item-link">Дом из лафета</a>
-                    </div>
+                    <button type="button" class="calc-content-btn">Далее 
+                        <span class="arrow"></span>
+                    </button>
                 </div>
-                <a href="#" class="calculation-content-btn">Далее 
-                    <span class="arrow"></span>
-                </a>
             </div>
         </div>
     </section>
@@ -326,9 +374,6 @@
     <?php
         include ('blocks/popups.php');
     ?>
-    <?php
-        include ('blocks/calculate-count.php');
-    ?>
     <!-- <div class="btn-help-questions">
         <a class="btn-calc">Рассчитать стоимость</a>
         <div class="btn-question-icon">
@@ -340,6 +385,7 @@
     <script src="js/main.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/usset-swiper.js"></script>
+    <script src="js/calculation.js"></script>
     <script>
         let doc = document
         

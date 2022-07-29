@@ -1,6 +1,6 @@
-2022-07-26 17:28:18 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
-2022-07-26 17:28:18 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД
-2022-07-26 17:29:12 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
-2022-07-26 17:29:12 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД
-2022-07-26 17:29:41 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
-2022-07-26 17:29:41 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД
+2022-07-28 10:21:53 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
+2022-07-28 10:21:53 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД
+2022-07-28 10:22:58 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
+2022-07-28 10:22:58 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД
+2022-07-28 10:23:00 (МСК) - Не удалось подключиться к БД "mysql:host=localhost;dbname=benefit_house;charset=utf8;login=root2;password:root" ::: SQLSTATE[HY000] [1045] Access denied for user 'root2'@'localhost' (using password: YES)
+2022-07-28 10:23:00 (МСК) - Запрос не прошёл, тк не удалось подключиться к БД

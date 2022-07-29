@@ -152,6 +152,7 @@ if (!isset($_GET['tag'])) {
   <script src="/libs/swiper-bundle/swiper-bundle.min.js"></script>
   <script src="/libs/jquery.validate/jquery.validate.js"></script>
   <script src="/js/main.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

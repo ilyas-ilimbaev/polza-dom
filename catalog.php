@@ -6,14 +6,14 @@ include('class/db.php');
 
 $base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS);
 
-$limit = 10;
+$limit = 1;
 
 $result = $base->query("SELECT `name-tag`,`name-tag-ru`,`img` FROM `house_list` WHERE 1 LIMIT $limit");
 
 $show_items = "";
 foreach ($result as &$dom) {
     $show_items .= "<div class=\"list-project__project-card\">
-                        <a href=\"projects.php?tag=" . $dom['name-tag'] . "\" class=\"project-card__img-link-project\">
+                        <a href=\"projects?tag=" . $dom['name-tag'] . "\" class=\"project-card__img-link-project\">
                             <img src=\"" . $dom['img'] . "\" alt=\"" . $dom['name-tag-ru'] . "\" class=\"project-card__img\">
                             <div class=\"project-card__hover-project-name\">" . $dom['name-tag-ru'] . "</div>
                         </a>
@@ -155,11 +155,14 @@ foreach ($result as &$dom) {
                                     <div class="filter-group__label-text">Баня</div>
                                 </label>
                             </div>
-                        </div>
+                        </div>                       
+                        <button class="show-all-bitch">Показать</button>
                     </div>
-                    <div class="catalog-content__list-project">
-                        <?php echo $show_items; ?>
-                        <a href="#" class="card__more-link" data-count="<?php echo $limit; ?>">Смотреть больше</a>
+                    <div class="catalog-content__list-project" style="display: flex; flex-direction: column;">
+                        <div class="warp-dop" style="display: flex; flex-wrap: wrap;">
+                            <?php echo $show_items; ?>
+                        </div>
+                        <a href="#" class="card__more-link" data-count="<?php echo $limit; ?>" data-limit="<?php echo $limit; ?>" data-filters="not">Смотреть больше</a>
                     </div>
                 </div>
             </div>
@@ -188,7 +191,7 @@ foreach ($result as &$dom) {
     ?>
     <?php
         include ('blocks/popups.php');
-    ?>    
+    ?>
     <!-- <div class="btn-help-questions">
         <a class="btn-calc">Рассчитать стоимость</a>
         <div class="btn-question-icon">
@@ -198,7 +201,138 @@ foreach ($result as &$dom) {
     <script src="libs/swiper-bundle/swiper-bundle.min.js"></script>
     <script src="libs/jquery.validate/jquery.validate.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/range.js"></script>
+    <script src="js/popup.js"></script>
+    <script>
+        function get_filters() {
+            return {
+                "min_cost": "1100000",
+                "max_cost": "9100000",
+                "min_square": "68",
+                "max_square": "290",
+                "quantity-storey": "-",
+                "quantity-bedroom": "-",
+                "materials": "brick",
+                "garage": "1",
+                "bathhouse": "-"
+            }
+        }
+
+        document.querySelector(".show-all-bitch").addEventListener("click", () => {
+            const limit = +document.querySelector(".card__more-link").getAttribute("data-limit")
+            document.querySelector(".card__more-link").setAttribute("data-count", limit)
+            document.querySelector(".card__more-link").style.display = "block"
+            const filters = get_filters()
+
+            document.querySelector(".warp-dop").innerHTML = "Загрузка";
+
+            ajaxPost("query/show_catalog_filters.php", `limit=${limit}&filters=${JSON.stringify(filters)}`, (result) => {
+                result = JSON.parse(result)
+                if (result.success) {
+                    result = result.house_list
+                    console.log(result, limit + 1)
+                    if (result.length == limit + 1) {
+                        document.querySelector(".card__more-link").setAttribute("data-count", limit)
+                        document.querySelector(".card__more-link").setAttribute("data-filters", "yes")
+                        length_list = result.length - 1
+                    } else {
+                        document.querySelector(".card__more-link").style.display = "none"
+                        length_list = result.length
+                    }
+
+                    let list = "";
+                    for (let i = 0; i < length_list; i++) {
+                        let element = result[i];
+                        list += `<div class="list-project__project-card"><a href="projects?tag=${element['name-tag']}" class="project-card__img-link-project"><img src="${element['img']}" alt="${element['name-tag-ru']}" class="project-card__img"><div class="project-card__hover-project-name">${element['name-tag-ru']}</div></a></div>`;
+                    }
+                    document.querySelector(".warp-dop").innerHTML = list
+                } else {
+                    alert("Произошла ошибка")
+                }
+            })
+        })
+
+        document.querySelector(".card__more-link").addEventListener("click", (e) => {
+            e.preventDefault()
+            const limit = +e.target.getAttribute("data-limit")
+            const count = +e.target.getAttribute("data-count")
+            const filters = e.target.getAttribute("data-filters")
+            if (filters == "not")
+                ajaxPost("query/show_catalog.php", `count=${count}&limit=${limit}`, (result) => {
+                    result = JSON.parse(result)
+                    if (result.success) {
+                        result = result.house_list
+                        if (result.length == limit + 1) {
+                            e.target.setAttribute("data-count", count + limit)
+                            length_list = result.length - 1
+                        } else {
+                            e.target.style.display = "none"
+                            length_list = result.length
+                        }
+                        let list = "";
+                        for (let i = 0; i < length_list; i++) {
+                            let element = result[i];
+                            list += `<div class="list-project__project-card"><a href="projects?tag=${element['name-tag']}" class="project-card__img-link-project"><img src="${element['img']}" alt="${element['name-tag-ru']}" class="project-card__img"><div class="project-card__hover-project-name">${element['name-tag-ru']}</div></a></div>`;
+                        }
+                        document.querySelector(".warp-dop").innerHTML += list
+                    } else {
+                        alert("Произошла ошибка")
+                    }
+                })
+            else
+                ajaxPost("query/show_catalog.php", `count=${count}&limit=${limit}&filters=${JSON.stringify(get_filters())}`, (result) => {
+                    console.log(result)
+                    result = JSON.parse(result)
+                    console.log(result)
+                    if (result.success) {
+                        result = result.house_list
+                        if (result.length == limit + 1) {
+                            e.target.setAttribute("data-count", count + limit)
+                            length_list = result.length - 1
+                        } else {
+                            e.target.style.display = "none"
+                            length_list = result.length
+                        }
+                        let list = "";
+                        for (let i = 0; i < length_list; i++) {
+                            let element = result[i];
+                            list += `<div class="list-project__project-card"><a href="projects?tag=${element['name-tag']}" class="project-card__img-link-project"><img src="${element['img']}" alt="${element['name-tag-ru']}" class="project-card__img"><div class="project-card__hover-project-name">${element['name-tag-ru']}</div></a></div>`;
+                        }
+                        document.querySelector(".warp-dop").innerHTML += list
+                    } else {
+                        alert("Произошла ошибка")
+                    }
+                })
+        })
+
+        function ajaxPost(url, parameters, callback) {
+            // parameters = encodeURIComponent(parameters)
+            if (parameters === false || parameters === null || parameters === undefined) {
+                parameters = "";
+            }
+            var request = new XMLHttpRequest();
+            request.open('POST', url, true);
+            request.addEventListener('readystatechange', function() {
+                if ((request.readyState == 4) && (request.status == 200)) {
+                    callback(request.responseText)
+                } else {
+                    if (request.readyState == 0) {
+                        // Request not initialized
+                        console.log('Request not initialized')
+                    }
+                    if (request.status == 403) {
+                        // Forbidden
+                        console.log('Forbidden')
+                    }
+                    if (request.status == 404) {
+                        // Not Found
+                        console.log('Not Found')
+                    }
+                }
+            });
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+            request.send(parameters);
+        }
+    </script>
 </body>
 
 </html>
