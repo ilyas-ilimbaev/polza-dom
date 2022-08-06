@@ -2,11 +2,11 @@
 
 include('config.php');
 
-include('class/db.php');
+include('class/Db.php');
 
 $base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS);
 
-$limit = 1;
+$limit = 6;
 
 $result = $base->query("SELECT `name-tag`,`name-tag-ru`,`img` FROM `house_list` WHERE 1 LIMIT $limit");
 
@@ -24,77 +24,94 @@ foreach ($result as &$dom) {
 
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Строительство домов под ключ от строительной компании Польза-Дом</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper-bundle/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
+    <?php
+        $link = '<link rel="stylesheet" href="css/catalog.css">';
+        $script = '<script src="https://code.jquery.com/jquery-3.6.0.js"></script>';
+        $script = '<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>';
+        include('blocks/head.php');
+    ?>
 <body>
     <?php
-        include ('blocks/header.php');
+    include('blocks/header.php');
     ?>
     <section class="catalog">
         <div class="container">
             <div class="catalog__wrapper">
                 <h2 class="section-title catalog-title">Каталог</h2>
+                <div class="catalog__top-filter">
+                    <div class="catalog__filtering">
+                        <p class="catalog__filtering-text">Сортировать по:</p>
+                        <a href="#" class="catalog__filtering-parameter">рейтингу</a>
+                        <div class="catalog__filtering__select-container">
+                            <select class="catalog__filtering__select"><option value="1">рейтингу</option>
+                                <option value="2">стоимости</option>
+                                <option value="2">стоимости</option>
+                                <option value="3">популярности</option>
+                                <option value="4">наименованию</option>
+                                <option value="5">оценке</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="catalog__filters-open">   
+                        <svg class="icon top-filter-icon">
+                            <use xlink:href="img/sprite.svg#top-filter"></use>
+                        </svg>
+                    </div>
+                </div>
                 <div class="catalog-content">
                     <div class="catalog-content__filter-group">
                         <div class="filter-group filter-group__cost-filter">
                             <div class="filter-group__title">Стоимость</div>
                             <div class="filter-group__range-line-container">
-                                <div class="filter-group__range-line">
-                                    <div class="range-line__slide-rail"></div>
-                                    <div class="range-line__min"></div>
-                                    <div class="range-line__max"></div>
+                                <div id="slider-range-count" class="filter-group__range-line">
+                                    <div class="range-line__slide-rail ui-slider-range">
+                                    </div>
+                                    <span tabindex="0" class="range-line__min ui-slider-handle">
+                                    </span>
+                                    <span tabindex="0" class="range-line__max ui-slider-handle">
+                                    </span>
                                 </div>
                             </div>
                             <div class="filter-group__form cost-range">
-                                <input type="text" value="" placeholder="от 1 114 000" class="filter-group__min-range filter-group__form-field">
-                                <input type="text" value="" placeholder="до 9 570 380" class="filter-group__max-range filter-group__form-field">
+                                <input type="text" value="" placeholder="от 1 114 000" id="range-price-min" class="filter-group__min-range filter-group__form-field">
+                                <input type="text" value="" placeholder="до 9 570 380" id="range-price-max" class="filter-group__max-range filter-group__form-field">
                             </div>
                         </div>
                         <div class="filter-group filter-group__area-filter">
                             <div class="filter-group__title">Общая площадь</div>
                             <div class="filter-group__range-line-container">
-                                <div class="filter-group__range-line">
-                                    <div class="range-line__slide-rail"></div>
-                                    <div class="range-line__min"></div>
-                                    <div class="range-line__max"></div>
+                                <div id="slider-range-area" class="filter-group__range-line">
+                                    <div class="range-line__slide-rail">
+                                    </div>
+                                    <span tabindex="0" class="range-line__min ui-slider-handle">
+                                    </span>
+                                    <span tabindex="0" class="range-line__max ui-slider-handle">
+                                    </span>
                                 </div>
                             </div>
                             <div class="filter-group__form area-range">
-                                <input type="text" value="" placeholder="от 68" class="filter-group__min-range filter-group__form-field">
-                                <input type="text" value="" placeholder="до 290" class="filter-group__max-range filter-group__form-field">
+                                <input type="text" value="" placeholder="от 68" id="range-area-min" class="filter-group__min-range filter-group__form-field">
+                                <input type="text" value="" placeholder="до 290" id="range-area-max" class="filter-group__max-range filter-group__form-field">
                             </div>
                         </div>
                         <div class="filter-group filter-group__count-floors-filter">
                             <div class="filter-group__title">Количество этажей</div>
                             <div class="filter-group__form count-floors-range">
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-floors" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-floors" class="filter-group__real-radio" />
 
                                     <div class="filter-group__label-text">1 (<span class="filter-group__numberOffers">17</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-floors" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-floors" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">2 (<span class="filter-group__numberOffers">35</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-floors" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-floors" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">3 (<span class="filter-group__numberOffers">8</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-floors" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-floors" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">1,5 (<span class="filter-group__numberOffers">1</span>)</div>
                                 </label>
                             </div>
@@ -103,20 +120,20 @@ foreach ($result as &$dom) {
                             <div class="filter-group__title">Количество спален</div>
                             <div class="filter-group__form count-bedrooms-range">
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-bedrooms" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-bedrooms" class="filter-group__real-radio" />
 
                                     <div class="filter-group__label-text">1 (<span class="filter-group__count-bedrooms">17</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-bedrooms" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-bedrooms" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">2 (<span class="filter-group__count-bedrooms">35</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-bedrooms" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-bedrooms" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">3 (<span class="filter-group__count-bedrooms">8</span>)</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="count-bedrooms" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="count-bedrooms" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">4 (<span class="filter-group__count-bedrooms">1</span>)</div>
                                 </label>
                             </div>
@@ -125,20 +142,20 @@ foreach ($result as &$dom) {
                             <div class="filter-group__title">Материалы</div>
                             <div class="filter-group__form materials-range">
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="materials" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="materials" class="filter-group__real-radio" />
 
                                     <div class="filter-group__label-text">Кирпич</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="materials" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="materials" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">Пеноблок</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="materials" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="materials" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">Бревно</div>
                                 </label>
                                 <label for="" class="filter-group__form-label">
-                                    <input type="radio" name="materials" class="filter-group__real-radio" />
+                                    <input type="checkbox" name="materials" class="filter-group__real-radio" />
                                     <div class="filter-group__label-text">Газоблок</div>
                                 </label>
                             </div>
@@ -155,8 +172,8 @@ foreach ($result as &$dom) {
                                     <div class="filter-group__label-text">Баня</div>
                                 </label>
                             </div>
-                        </div>                       
-                        <button class="show-all-bitch">Показать</button>
+                        </div>
+                        <button class="show-all-bitch">Поиск</button>
                     </div>
                     <div class="catalog-content__list-project" style="display: flex; flex-direction: column;">
                         <div class="warp-dop" style="display: flex; flex-wrap: wrap;">
@@ -187,10 +204,10 @@ foreach ($result as &$dom) {
         </div>
     </section>
     <?php
-        include ('blocks/footer.php');
+    include('blocks/footer.php');
     ?>
     <?php
-        include ('blocks/popups.php');
+    include('blocks/popups.php');
     ?>
     <!-- <div class="btn-help-questions">
         <a class="btn-calc">Рассчитать стоимость</a>
@@ -203,6 +220,30 @@ foreach ($result as &$dom) {
     <script src="js/main.js"></script>
     <script src="js/popup.js"></script>
     <script>
+        $(function () {
+            $("#slider-range-count").slider({
+                range: true,
+                min: 1114000,
+                max: 9570380,
+                values: [1114000, 9570380],
+                slide: function (event, ui) {
+                $("#range-price-min").val("от " + ui.values[0]) +
+                    $("#range-price-max").val("до " + ui.values[1]);
+                }
+            });
+        });
+        $(function () {
+            $("#slider-range-area").slider({
+                range: true,
+                min: 68,
+                max: 290,
+                values: [68, 290],
+                slide: function (event, ui) {
+                $("#range-area-min").val("от " + ui.values[0]) +
+                    $("#range-area-max").val("до " + ui.values[1]);
+                }
+            });
+        });
         function get_filters() {
             return {
                 "min_cost": "1100000",

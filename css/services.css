@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/*переменные*/ /*fonts*/
+/*color*/
+/**/
+/*шрифты*/
+/*main fonts*/
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2");
+}
+/*section services*/
+.services {
+  padding: 70px 0;
+}
+.services-title {
+  margin-bottom: 50px;
+}
+.services-card {
+  position: relative;
+  width: 370px;
+  height: 322px;
+  margin: 0px 30px 30px 0;
+  z-index: 1;
+}
+.services-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(360deg, #272727 -2.48%, rgba(0, 0, 0, 0) 85.4%);
+  z-index: -1;
+}
+.services-card__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: 27% center;
+  z-index: -2;
+}
+.services-card__desc {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+.services-card__title, .services-card__link-more {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.services-card__link-more {
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  display: inline-block;
+  text-transform: none;
+}
+.services-card__link-more::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+.services-card-wrapper {
+  margin-right: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*media*/
+@media (max-width: 396px) {
+  .services-title::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 4.5em;
+    right: 0;
+    width: 100%;
+    max-width: 340px;
+    height: 2px;
+    background-color: #038E00;
+  }
+  .services-card {
+    margin: 0px 0px 20px 0;
+    width: 313px;
+    height: 272px;
+  }
+  .services-card-wrapper {
+    margin-right: 0px;
+    flex-direction: column;
+  }
+}

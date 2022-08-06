@@ -2,7 +2,7 @@
 
 include('config.php');
 
-include('class/db.php');
+include('class/Db.php');
 
 $base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS);
 
@@ -23,18 +23,12 @@ if (!isset($_GET['tag'])) {
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Строительство домов под ключ от строительной компании Польза-Дом</title>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/swiper-bundle/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
+  <?php
+      $link = '<link rel="stylesheet" href="css/projects.css">';
+      $script = '<script src="https://code.jquery.com/jquery-3.6.0.js"></script>';
+      $script = '<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>';
+      include('blocks/head.php');
+  ?>
 
 <body>
   <?php
@@ -51,7 +45,7 @@ if (!isset($_GET['tag'])) {
           <div class="project__basic-info" style="padding-bottom: 50px;">
             <h3 class="project__title">Произошла ошибка</h3>
             <p>Вы ошиблись в ссылке или данный дом больше не продаётся.</p>
-            <a href="../catalog.html" style="color: blue; text-decoration: underline;">Весь каталог</a>
+            <a href="../catalog.php" style="color: blue; text-decoration: underline;">Весь каталог</a>
 
 
           </div>
@@ -62,7 +56,7 @@ if (!isset($_GET['tag'])) {
       ?>
         <div class="project-main-info">
           <div class="project__basic-info">
-            <h3 class="project__title">
+            <h3 class="project__title project__title-desk">
               Дом
               <?php echo $result['square']; ?>
               кв.м.
@@ -82,7 +76,7 @@ if (!isset($_GET['tag'])) {
               </div>
               <div class="project__card">
                 <img src="../img/ladder.png" alt="этаж" class="project__card-icon" />
-                <span class="basic-info__card-text"><?php echo $result['quantity-storey']; ?>
+                <span class="project__card-text"><?php echo $result['quantity-storey']; ?>
                   этажа</span>
               </div>
               <div class="project__card">
@@ -107,6 +101,11 @@ if (!isset($_GET['tag'])) {
             </div>
           </div>
           <img src="<?php echo $result['img']; ?>" alt="Дом <?php echo $result['square']; ?> кв.м." class="project-img" />
+          <h3 class="project__title project__title-mob">
+              Дом
+              <?php echo $result['square']; ?>
+              кв.м.
+          </h3>
         </div>
         <div class="project-main-desc">
           <div class="project__title black-color">Описание</div>

@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Строительство домов под ключ от строительной компании Польза-Дом</title>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/swiper-bundle/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <?php
+        $link = '
+            <link rel="stylesheet" href="/css/swiper-bundle/swiper-bundle.min.css" />
+            <link rel="stylesheet" href="/css/detailed-info-services.css">
+            <link rel="stylesheet" href="/css/swiper.css">
+        ';
+        include('../blocks/head.php');
+    ?>
 <body>
     <?php
         include ('../blocks/header.php');
     ?>
     <section class="detailed-info-services">
-        <div class="container">
+        <div class="container detailed-container">
             <div class="info-services-wrapper">
-                <h2 class="section-title">фундаментные работы</h2>
+                <div class="info-services__title-wrapper">
+                    <h2 class="section-title">фундаментные работы</h2>
+                </div>
                 <div class="swiper info-services-swiper">
                     <div class="swiper-wrapper info-services-content">
                         <div class="swiper-slide info-services-card">
@@ -74,6 +72,9 @@
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev info-services-button-prev"></div>
                 <div class="swiper-button-next info-services-button-next"></div>
+                
+                  <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </section>

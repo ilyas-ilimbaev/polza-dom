@@ -1,5 +1,7 @@
 .more
     position: relative
+    max-width: 1522px
+    margin: 0 auto
     &::before
         content: ""
         display: block
@@ -17,7 +19,6 @@
         width: 489px
         border: 2px solid #038E00
     &__wrapper
-        position: relative
         display: flex
         justify-content: space-between
     &-title
@@ -44,6 +45,9 @@
             & ol 
                 padding-left: 20px
         &-right
+            position: absolute
+            right: 0
+            z-index: -1
             max-width: 768px
             & img 
                 height: 100%

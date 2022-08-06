@@ -11,6 +11,9 @@
 @media (max-width: 396px)
     .container
         max-width: 330px
+    .section-title
+        font-size: 25px
+        line-height: 30px
     .header
         height: auto
         padding: 12px 0
@@ -27,7 +30,11 @@
         &-list
             display: none
         &-menu
+            padding: 35px
             width: 100%
+            &-link
+                font-size: 22px
+                line-height: 27px
         &-search-item
             margin: 0 30px
         &-content
@@ -49,24 +56,6 @@
             padding: 20px 15px
             font-size: 17px
             line-height: 21px
-    .benefits
-        padding-top: 50px
-        &-title
-            font-size: 27px
-        &-mob
-            display: none
-        &-item
-            margin-right: 30px
-            max-width: 144px
-            &:nth-child(2n)
-                margin-right: 0
-                
-            &__title
-                font-size: 10px
-                line-height: 12px
-            &__img-wrapper
-                width: 90px
-                height: 90px
     .more
         padding: 18.5px 0
         &__wrapper
@@ -89,6 +78,9 @@
             right: 0
             left: auto
             width: 237px
+        &-item
+            &-right
+                position: relative
     .reviews
         &-title
             font-size: 27px
@@ -108,36 +100,13 @@
         &-comment
             &__wrapper
                 margin-right: 0
-    .calculation
+    .calc
         &-tabs
             margin-right: 0
             padding: 50px 25px
+            height: 640px
         &-content
             display: none
-    .ourworks
-        &-content
-            margin-right: 0
-        &-title
-            font-size: 27px
-            line-height: 33px
-            &::before
-                content: ""
-                display: block
-                position: absolute
-                top: 4.5em
-                right: 0
-                width: 100%
-                max-width: 340px
-                height: 2px
-                background-color:#038E00
-        &-card
-            margin: 0
-            margin-bottom: 30px
-            &__wrapper
-                justify-content: center
-            &-img
-                width: 282px
-                height: 245px
     .newsletter
         padding: 30px 24px
         &-title
@@ -153,33 +122,35 @@
             &__input, &__submit, &__text
                 font-size: 13px
                 line-height: 16px
+            &__submit
+                padding: 13px 3px
+                font-size: 9px
+                line-height: 11px
             &__input
                 padding: 15px 14px
-    .services
-        &-title
-            &::before
-                content: ""
+                padding: 13px 4px
+                font-size: 10px
+                line-height: 12px
+            &__text
                 display: none
-                position: absolute
-                top: 4.5em
-                right: 0
-                width: 100%
-                max-width: 340px
-                height: 2px
-                background-color:#038E00
-        &-card
-            margin: 0px 0px 20px 0
-            width: 313px
-            height: 272px
+    .help
+        &-question
             &-wrapper
-                margin-right: 0px
-                flex-direction: column
-    .info
-        &-services
-            &-content
-                flex-direction: column
-            &-card
-                margin-right: 0
+                position: relative
+                padding: 40px 14px 4px 14px
+            &__left-img-wrapper
+                display: none
+            &__right
+                &-desc__wrapper
+                    position: initial
+                    width: 70%
+                &-img
+                    position: absolute
+                    right: 0
+                    bottom: 0px
+                    width: 170px
+                    height: 216px
+		
     .footer
         &__wrapper
             &-desk
@@ -241,6 +212,28 @@
         &-maps-link
 
         &-right
-
-        
-
+    .popup
+        &-wrapper
+            padding: 50px 30px
+        &-title
+            font-size: 25px
+            line-height: 30px
+        &-form 
+            & input:first-child
+                margin-top: 30px
+        &-form__field
+            padding: 18px 30px
+            width: 100%
+            font-size: 17px
+            line-height: 21px
+    .swiper
+        &-pagination
+            display: none
+        &-scrollbar
+            display: block
+@media (max-width: 360px)
+    .help
+        &-question
+            &__right
+                &-img
+                    width: 145px

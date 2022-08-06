@@ -1,0 +1,354 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section homepage*/
+%top-house__text
+    font-family: $base-font
+    font-size: 17px
+    line-height: 21px
+    color: $base-color
+.benefits
+    padding-top: 70px
+    padding-bottom: 70px
+    &-title
+        text-align: center
+    &-items
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+    &-item
+        margin-top: 50px
+        margin-right: 50px
+        max-width: 316px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        &__title
+            font-family: $base-font
+            font-style: normal
+            font-weight: 500
+            font-size: 15px
+            line-height: 18px
+            text-align: center
+            color: $black-color
+        &__img-wrapper
+            width: 150px
+            height: 150px
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+        &__img
+.top-house
+    &__wrapper
+        &-slide
+    &__slide
+        margin-right: 30px
+        width: 570px !important
+        display: flex
+        background-color: #262626
+        &:nth-child(2n+2)
+            margin-right: 0      
+        &-img
+            width: 351px
+            display: flex
+            align-items: center
+            justify-content: center
+        &-content
+            padding: 20px 16px 50px 16px
+        &-title
+            @extend %top-house__text
+            font-weight: 500
+        &-desc
+            margin-bottom: 70px
+            max-width: 175px
+            background-color: #262626
+        &-text
+            margin-top: 30px
+            @extend %top-house__text
+            font-weight: 400
+        &-link
+            &-more
+                margin-top: 0
+                padding-bottom: 3px
+                border-bottom: 0.7px solid #FFFFFF
+        &-container
+            position: relative
+            margin-top: 70px
+.calc
+    padding: 70px 0 40px 0
+    &__wrapper
+        display: flex
+        justify-content: center
+    &-tabs
+        position: relative
+        padding: 70px 30px 95px 95px
+        max-width: 498px
+        background-image: url(../img/section-calculateBg.png)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        z-index: 1
+        height: 1005px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(42, 42, 42, 0.9)
+            z-index: -1
+        &__item
+            margin-bottom: 40px
+            font-family: $base-font
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            text-transform: uppercase
+            color: $base-color
+            cursor: pointer
+            &--active
+                color: #3DAD4F
+    &-content
+        overflow: hidden
+        width: 702px
+        margin-left: 70px
+        &-two
+            overflow: hidden
+            width: 772px
+            display: none
+        &__wrapper
+            position: relative
+            display: none
+            min-height: 802px
+            width: 100%
+            // margin-left: 70px
+        &-stock
+            padding-left: 0
+            padding-top: 80px
+            display: flex
+        &--active
+            display: flex
+        &__title
+            margin-top: 70px
+            margin-bottom: 40px
+            font-family: $base-font
+            font-weight: 550
+            font-size: 27px
+            line-height: 33px
+            text-align: center
+            text-transform: uppercase
+            color: $black-color
+        &__container-slide
+            display: flex
+            flex-direction: column
+            height: 100%
+            justify-content: space-between
+        &__cards
+            &-wrapper
+                width: 702px
+                display: flex
+                flex-wrap: wrap
+                justify-content: left
+        &__card
+            position: relative
+            margin: 0px 30px 30px 0
+            width: 214px
+            display: flex
+            flex-direction: column
+            text-align: center
+            border: 1px solid #BABABA
+            &-link
+                height: 64px
+                font-family: $base-font
+                font-weight: 400
+                font-size: 15px
+                line-height: 18px
+                color: $black-color
+                display: flex
+                justify-content: center
+                align-items: center
+            &:nth-child(3n+3)
+                margin-right: 0
+
+        &__img
+            width: 100%
+            height: 100%
+            max-width: 214px
+            max-height: 189px
+        &-btn
+            display: inline-flex
+            align-items: center
+            justify-content: right
+            font-family: $base-font
+            font-size: 27px
+            line-height: 33px
+            text-align: center
+            text-transform: uppercase
+            color: $black-color
+            background-color: transparent
+            border: none
+            &-back
+                color: #828282
+                margin-right: 40px
+            &-wrap
+                width: 100%
+                display: flex
+                justify-content: end
+        &__input-choice
+            width: 100%
+            height: 100%
+            position: absolute
+            right: 0
+            left: 0
+            margin: 0 auto
+            opacity: 0
+            &:checked + .calc-content__card-link
+                background-color: #3DAD4F
+                color: #fff
+    &-stock
+        width: 100%
+        // margin-left: -70px
+        &__title
+            font-family: $base-font
+            font-weight: 600
+            font-size: 37px
+            text-transform: uppercase
+            color: #121212
+            margin-bottom: 50px
+            margin-left: 30px
+        &-wrap
+            display: flex
+            justify-content: space-between
+            position: relative
+        &__left
+            display: flex
+            flex-direction: column
+            padding-left: 30px
+            &-text
+                font-family: $base-font
+                font-weight: 400
+                font-size: 17px
+                color: #000000
+                & > a
+                    text-decoration: none
+                    font-weight: 600
+                    color: #000000
+                &:not(:last-child)
+                    margin-bottom: 40px
+                &:nth-child(1)
+                    margin-top: 30px
+        &__right
+            width: 426px
+        &__line
+            &-top
+                display: block
+                border-top: 2px solid #038E00
+                position: absolute
+                left: 0
+                top: 0
+                width: 300px
+            &-down
+                display: block
+                border-bottom: 2px solid #038E00
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 562px
+                z-index: -1
+
+.wrap-input
+    position: relative
+    &-item
+        width: 232px
+        height: 56px
+        position: relative
+        border-radius: 55px
+        &-text
+            width: 282px
+        & input[type="radio"]
+            width: 100%
+            height: 100%
+            opacity: 0
+            &:checked + label
+                background-color: #3dad4f
+                color: #fff
+        & input[type="text"]
+            width: 100%
+            height: 100%
+            border-radius: 55px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            padding: 0 20px 0 30px
+        & label
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            cursor: pointer
+            color: #000
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 55px
+            border: 0.4px solid #000000
+        &:nth-child(2n)
+            margin-left: 50px
+            margin-bottom: 50px
+.thanks-answer
+    &__input
+        border: 0.4px solid #000000
+        border-radius: 55px
+        width: 282px
+        height: 56px
+        padding: 0 16px 0 72px
+
+    &__img
+        position: absolute
+        width: 27px
+        height: 27px
+        left: 30px
+        top: 50%
+        transform: translateY(-50%)
+    &__agreement
+        font-family: $base-font
+        font-weight: 500
+        font-size: 17px
+    &__send
+        font-family: $base-font
+        font-weight: 400
+        font-size: 21px
+        text-transform: uppercase
+        color: #FFFFFF
+        padding: 15px 24px
+        background: #2D7439
+        border-radius: 55px
+        border: none
+@media (max-width: 390px)
+    .benefits
+        padding-top: 50px
+        &-title
+            font-size: 27px
+        &-mob
+            display: none
+        &-item
+            margin-right: 30px
+            max-width: 144px
+            &:nth-child(2n)
+                margin-right: 0
+                
+            &__title
+                font-size: 10px
+                line-height: 12px
+            &__img-wrapper
+                width: 90px
+                height: 90px

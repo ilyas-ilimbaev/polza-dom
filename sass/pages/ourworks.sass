@@ -1,3 +1,8 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section ourworks*/
 .ourworks
     position: relative
     padding: 70px 0
@@ -36,3 +41,29 @@
     color: $black-color
     border: 1px solid $black-color
     border-radius: 45px
+/*media*/
+@media (max-width: 396px)
+    .ourworks
+        &-content
+            margin-right: 0
+        &-title
+            font-size: 27px
+            line-height: 33px
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 4.5em
+                right: 0
+                width: 100%
+                max-width: 340px
+                height: 2px
+                background-color:#038E00
+        &-card
+            margin: 0
+            margin-bottom: 30px
+            &__wrapper
+                justify-content: center
+            &-img
+                width: 282px
+                height: 245px

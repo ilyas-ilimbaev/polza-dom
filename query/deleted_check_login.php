@@ -15,7 +15,7 @@ if (isset($_POST['check'])) {
 
 
 include '../config.php';
-include '../class/db.php';
+include '../class/Db.php';
 
 $main_base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS, CHARSET, BASE_HOST);
 

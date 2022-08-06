@@ -1,0 +1,45 @@
+.help
+    &-question
+        padding: 50px 0
+        max-width: 1600px
+        margin: 0 auto
+        &-wrapper
+            display: flex
+            align-items: end
+            justify-content: space-between
+        &-title, &-text
+            color: $black-color
+        &__right-desc__wrapper
+            position: relative
+            display: flex
+            align-items: end
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                width: 660px
+                height: 2px
+                bottom: 0
+                right: 0px
+                background-color:#038E00
+        &__left-img
+            width: 453px
+            height: 448px
+            &-wrapper
+                position: relative
+                margin-right: 40px
+                flex-shrink: 0
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    width: 691px
+                    height: 2px
+                    left: 0px
+                    top: 0
+                    background-color:#038E00
+        &__right-img
+            width: 523px
+            height: 505px
+            object-fit: contain
+            object-position: bottom

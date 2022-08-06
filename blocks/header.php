@@ -14,7 +14,7 @@
                         </a>
                         <ul class="header-list">
                             <li class="header-list-item">
-                                <a href="/catalog.php" class="header-list-link">Каталог</a>
+                                <a href="/catalog" class="header-list-link">Каталог</a>
                             </li>
                             <li class="header-list-item">
                                 <a href="/services.php" class="header-list-link">Услуги</a>
@@ -79,7 +79,7 @@
                             <a href="/" class="header-menu-link">Отзывы</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/" class="header-menu-link">Контакты</a>
+                            <a href="/contacts" class="header-menu-link">Контакты</a>
                         </li>
                         <li class="header-menu-item">
                             <a href="/" class="header-menu-link">Вопрос - ответ</a>

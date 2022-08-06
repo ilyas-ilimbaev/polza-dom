@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Строительство домов под ключ от строительной компании Польза-Дом</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper-bundle/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <?php
+        $link = '<link rel="stylesheet" href="css/ourworks.css">';
+        $script = '<script src="https://code.jquery.com/jquery-3.6.0.js"></script>';
+        $script = '<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>';
+        include('blocks/head.php');
+    ?>
 <body>
     <?php
         include ('blocks/header.php');

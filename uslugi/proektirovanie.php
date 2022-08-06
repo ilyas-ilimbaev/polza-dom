@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Строительство домов под ключ от строительной компании Польза-Дом</title>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/swiper-bundle/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
-</head>
+    <?php
+        $link = '
+            <link rel="stylesheet" href="/css/swiper-bundle/swiper-bundle.min.css" />
+            <link rel="stylesheet" href="/css/detailed-info-services.css">
+            <link rel="stylesheet" href="/css/swiper.css">
+        ';
+        include('../blocks/head.php');
+    ?>
 <body>
     <?php
         include ('../blocks/header.php');
@@ -21,7 +16,7 @@
         <div class="container">
             <div class="info-services-wrapper">
                 <h2 class="section-title">Проектирование</h2>
-                <div class="swiper designing-services-swiper">
+                <div class="swiper info-services-swiper__design">
                     <div class="swiper-wrapper info-services-content">
                         <div class="swiper-slide info-services-slide">
                             <img src="../img/vybor-uchastka.png" alt="Выбор участка" class="info-services-slide__img">
@@ -31,13 +26,13 @@
                                     От расположения участка будет зависеть комфорт проживания на нем. От чего нужно отталкиваться, выбирая район:
                                 </p>
                                 <p class="info-services-slide__text card-text">
-                                    1. Удаленность от города. Если вы работаете удаленно или не собираетесь часто посещать свой участок, то переплачивать за близость к городу не обязательно. Но выбирая участок для переезда на ПМЖ с постоянной нуждой ездить в город, расстояние играет роль.
+                                    <b>1. Удаленность от города.</b> Если вы работаете удаленно или не собираетесь часто посещать свой участок, то переплачивать за близость к городу не обязательно. Но выбирая участок для переезда на ПМЖ с постоянной нуждой ездить в город, расстояние играет роль.
                                 </p>
                                 <p class="info-services-slide__text card-text">
-                                    2. Инфраструктура вокруг. Обязательно оцените благоустройство: что есть в поселке, какие поселки есть рядом, есть ли остановка общественного транспорта и прочее.
+                                    <b>2. Инфраструктура вокруг.</b> Обязательно оцените благоустройство: что есть в поселке, какие поселки есть рядом, есть ли остановка общественного транспорта и прочее.
                                 </p>
                                 <p class="info-services-slide__text card-text">
-                                    3. Экология. К изучению обстановки также относится и отслеживание загрязняющих объектов вокруг (фабрики, фермы, мусорные полигоны). Все это напрямую повлияет на чистоту воздуха, земли, грунтовых вод.
+                                    <b>3. Экология.</b> К изучению обстановки также относится и отслеживание загрязняющих объектов вокруг (фабрики, фермы, мусорные полигоны). Все это напрямую повлияет на чистоту воздуха, земли, грунтовых вод.
                                 </p>
                             </div>
                         </div>
