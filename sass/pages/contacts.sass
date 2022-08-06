@@ -1,0 +1,54 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section contacts*/
+.contacts
+    padding: 70px 0
+    &__wrapper
+    &-title
+        position: relative
+        padding-bottom: 30px
+        &::before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: #038E00
+            bottom: 0
+            left: 0
+    &-content
+        margin-top: 40px
+        display: flex
+        &__left, &__right
+            width: 50%
+        &__right
+        &__item
+            margin-bottom: 30px
+        &__list
+            margin-top: 10px
+            &-item
+                margin-top: 10px
+
+        &__list-link
+            font-family: $base-font
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.05em
+            color: $black-color
+    &-map-img
+        width: 570px
+        height: 483px
+    &__color-font
+        font-size: 20px
+        line-height: 24px
+        letter-spacing: 0.05em
+        color: #3DAD4F
+.item-title
+    font-family: $base-font
+    font-weight: 500
+    font-size: 27px
+    line-height: 33px
+    color: #000000
+@media (max-width: 396px)

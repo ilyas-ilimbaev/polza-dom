@@ -1,0 +1,50 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*swiper slider setting*/
+.swiper
+    &-slide
+        width: 370px
+        height: auto
+    &-button
+        &-prev, &-next
+            color: $black-color
+        &-prev
+            left: -60px
+        &-next
+            right: -60px
+    &-button-next, &-button-prev
+        z-index: 1
+    &-pagination
+        position: relative
+        margin-top: 30px
+        z-index: 1
+    &-pagination-bullet
+        margin-right: 30px!important
+        padding-top: 10px
+        width: 107px
+        height: auto
+        font-weight: 400
+        font-size: 27px
+        line-height: 37px
+        text-align: center
+        color: #9F9F9F
+        background: transparent
+        border-radius: inherit
+        border-bottom: 3px solid #038E00
+        opacity: 1
+    &-pagination-bullet-active
+        color: #000
+        background: transparent
+    &-scrollbar
+        margin: 0 auto
+        display: none
+        width: 90%
+        height: 2px
+        background-color: #7D7D7D
+    &-scrollbar-drag
+        top: -4px
+        height: 10px
+        background-color: #3DAD4F
+        width: 102px

@@ -1,0 +1,130 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section project*/
+.project
+    &-wrapper
+        background-color: #262626
+    &-main-info
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #262626
+    &__basic-info
+        padding: 70px 0px 0px 98px
+    &__img-wrapper
+    &-img
+        width: 698px
+        height: 646px
+    &-main-desc
+        padding: 70px 0px 0px 98px
+        background-color: #fff
+    &__title
+        font-family: $base-font
+        font-weight: 600
+        font-size: 37px
+        line-height: 45px
+        text-transform: uppercase
+        color: $base-color
+        &-mob
+            display: none
+    &__card-wrapper
+        margin-top: 40px
+        display: flex
+        flex-wrap: wrap
+    &__card
+        margin: 0px 40px 40px 0px
+        padding: 15px 7px
+        width: 117px
+        height: 117px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        background-color: #262626
+        border: 1px solid#43BD57
+        &-icon
+            width: 28px
+            height: 28px
+        &-text
+            margin-top: 10px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color: $base-color
+        &-price
+            font-family: $base-font
+            font-weight: 600
+            font-size: 27px
+            line-height: 33px
+            text-align: left
+            text-transform: lowercase
+            color: $base-color
+.black-color
+    margin-bottom: 40px
+    color: #000
+/*media*/
+@media (max-width: 396px)
+    .project
+        &-wrapper
+            padding: 0
+            background-color: transparent
+        &__title, &__card-price
+            font-size: 21px
+            line-height: 26px
+            &-desk
+                display: none
+            &-mob
+                display: block
+                margin-left: 10px
+                margin-bottom: 20px
+        &-img
+            width: 330px
+            height: 287px
+        &-main
+            &-info
+                padding: 50px 18px 20px 15px
+                flex-direction: column-reverse
+                align-items: baseline
+            &-desc
+                position: relative
+                margin-top: 20px
+                padding: 20px
+                height: 64px
+                overflow: hidden
+                &::before, &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    width: 100%
+                    height: 2px
+                    background-color:#038E00
+                &::before
+                    top: 0
+                &::after
+                    bottom: 0
+
+        &__basic-info
+            margin-top: 20px
+            padding: 0
+        &__card
+            margin: 0px 20px 25px 0px
+            width: 77px
+            height: auto
+            &:nth-child(3n+3)
+                margin-right: 0
+            &-wrapper
+                margin-top: 0
+                justify-content: center
+            &-icon
+                width: 21px
+                height: 21px
+            &-text
+                margin-top: 5px
+                font-size: 12px
+                line-height: 15px
+            &-price
+                margin-left: 10px

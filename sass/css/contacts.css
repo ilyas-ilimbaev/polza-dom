@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*переменные*/ /*fonts*/
+/*color*/
+/**/
+/*шрифты*/
+/*main fonts*/
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../sass/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2");
+}
+/*section contacts*/
+.contacts {
+  padding: 70px 0;
+}
+.contacts-title {
+  position: relative;
+  padding-bottom: 30px;
+}
+.contacts-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #038E00;
+  bottom: 0;
+  left: 0;
+}
+.contacts-content {
+  margin-top: 40px;
+  display: flex;
+}
+.contacts-content__left, .contacts-content__right {
+  width: 50%;
+}
+.contacts-content__item {
+  margin-bottom: 30px;
+}
+.contacts-content__list {
+  margin-top: 10px;
+}
+.contacts-content__list-item {
+  margin-top: 10px;
+}
+.contacts-content__list-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+.contacts-map-img {
+  width: 570px;
+  height: 483px;
+}
+.contacts__color-font {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #3DAD4F;
+}
+
+.item-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000000;
+}

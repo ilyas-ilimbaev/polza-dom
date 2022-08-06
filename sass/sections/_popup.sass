@@ -1,0 +1,362 @@
+.popup
+    position: fixed
+    margin: 0 auto
+    max-width: 554px
+    right: 0
+    left: 0
+    top: 12px
+    z-index: 9
+    &-wrapper
+        padding: 50px 66px 35px 66px
+        background-color: $base-color
+        text-align: center
+    &-title
+        display: inline-block
+        font-family: $base-font
+        font-weight: 500
+        font-size: 35px
+        line-height: 43px
+        text-align: center
+        font-variant: small-caps
+        color: $black-color
+    &-form
+        display: flex
+        flex-direction: column
+        align-items: center
+        & input:first-child
+            margin-top: 40px
+        &__field
+            margin-top: 30px
+            padding: 24px 30px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color: #484848
+            border: 0.4px solid #000000
+            border-radius: 55px
+            outline: none
+        &__item
+            display: flex
+            flex-direction: column
+            & input
+                margin-bottom: 0
+        &__btn
+            margin-top: 40px
+            padding: 12px 30px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            text-transform: uppercase
+            color: $base-color
+            background: #2D7439
+            border: none
+            border-radius: 55px
+            cursor: pointer
+    &-line
+        margin: 40px 0
+        width: 100%
+        height: 1px
+        background-color: $black-color
+    &-socialNetworks
+        display: flex
+        flex-direction: column
+        align-items: center
+    &-login
+        display: none
+        &.active
+            display: block
+    &-register
+        top: 10px
+        display: none
+        &.active
+            display: block
+        & .popup-wrapper
+            padding: 20px
+    &-calculate
+        &-cost
+            position: fixed
+            display: none
+            margin: 0 auto
+            margin-bottom: 30px
+            padding: 30px 13px 15px 13px
+            top: 50%
+            right: 0
+            left: 0
+            transform: translateY(-50%)
+            width: 333px
+            height: 413px
+            background: #F7F7F7
+            border-radius: 20px
+            overflow: hidden
+            z-index: 1
+            &__item
+    &-item
+        &-form
+        &-title
+            font-family: $base-font
+            font-weight: 600
+            font-size: 20px
+            line-height: 24px
+            color: $black-color
+        &-subtitle
+            margin: 15px 0
+            font-family: $base-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            color: $black-color
+        &-form
+    &-link
+        &-register
+            position: relative
+            padding-bottom: 6px
+            display: inline-block
+            font-family: $base-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            color: $black-color
+            cursor: pointer
+            &::before
+                content: ""
+                position: absolute
+                display: block
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background-color: $black-color
+    &-close
+        position: absolute
+        top: 15px
+        right: 22px
+        width: 20px
+        height: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        background: #838383
+        cursor: pointer
+        &::before, &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 10.88px
+            height: 1px
+            background-color: #FFFFFF
+        &::before
+            transform: rotate(135deg)
+        &::after
+            transform: rotate(-135deg)   
+    &-label
+        &__style-house
+            display: flex      
+
+
+.socialNetworks
+    &-item
+        margin-bottom: 30px
+        padding: 10px 17px
+        width: 100%
+        max-width: 244px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 40px
+    &-google
+        background: #970B0B
+    &-vk
+        background: #2E3C58
+    &-link
+        margin-left: 10px
+        font-family: $base-font
+        font-weight: 400
+        font-size: 12px
+        line-height: 15px
+        text-align: center
+        color: $base-color
+.form-reminder-show-password-link
+    margin-top: 15px
+    font-family: $base-font
+    font-weight: 400
+    font-size: 12px
+    line-height: 15px
+    text-align: right
+    color: rgba(0, 0, 0, 0.58)
+
+.calculate
+    &-cost
+        &-item
+            display: flex
+            flex-direction: column
+            &-2, &-3, &-4, &-5, &-6
+                display: none
+.form
+    &-item
+        &__label
+            position: relative
+            margin-top: 20px
+            padding: 18px 30px
+            display: flex
+            align-items: center
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color: $black-color
+            border: 0.4px solid $black-color
+            border-radius: 55px
+            &-input
+                padding: 0
+                margin-top: 25px
+            &-text
+                display: block
+                padding: 3px 0
+                font-family: $base-font
+                font-weight: 400
+                font-size: 13px
+                line-height: 16px
+                text-align: center
+                color: $black-color
+            &-img
+                position: relative
+                margin: 15px 30px 20px 0px
+                width: 125px
+                max-height: 139px
+                display: flex
+                flex-direction: column
+                text-align: center
+                border: 0.3px solid #858585
+        &__item-button
+            margin-top: 25px
+            padding: 15px 72px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 21px
+            line-height: 26px
+            text-transform: uppercase
+            color: $base-color
+            background-color: #2D7439
+            border: none
+            border-radius: 55px
+        &__input
+            width: 100%
+            padding: 17px 50px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color:#808080
+            border: none
+            border-radius: 55px
+        &__real
+            &-radio
+                width: 100%
+                height: 100%
+                position: absolute
+                left: 0
+                top: 0
+                margin: 0 auto
+                z-index: 2
+                opacity: 0
+                cursor: pointer
+
+        &__custom
+            &-radio
+                position: relative
+                margin-right: 30px
+                width: 20px
+                height: 20px
+                background: #A5A5A5
+                border-radius: 50%
+                &::before
+                    content: ""
+                    top: 0
+                    right: 0
+                    left: 0
+                    bottom: 0
+                    margin: auto
+                    position: absolute
+                    width: 20px
+                    height: 20px
+                    background-color: #2D7439
+                    border-radius: 50%
+                    display: none
+                &-img
+                    width: 125px
+                    height: 110px
+        &__question-number
+        &__button-wrapper
+            position: absolute
+            margin-top: 40px
+            padding: 15px
+            width: 100%
+            // height: 63px
+            bottom: 0
+            left: 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background-color: #5A5858
+            z-index: -1
+        &__button-prev
+            padding: 16px 9px
+            width: 33px
+            height: 33px
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: transparent
+            border: 1px solid #949494
+            border-radius: 45px
+        &__button-next
+            padding: 5px 10px
+            display: flex
+            align-items: center
+            font-family: 'Open Sans'
+            font-weight: 400
+            font-size: 15px
+            line-height: 20px
+            color: #FFFFFF
+            background-color: transparent
+            border: 1px solid #FFFFFF
+            border-radius: 20px
+        &__icon-input
+            position: absolute
+            left: 18px
+            width: 21px
+            height: 21px
+
+.question-number
+    font-family: 'Open Sans'
+    font-weight: 600
+    font-size: 15px
+    line-height: 20px
+    color: $base-color
+    &-active
+.button
+    &-prev
+    &-prev, &-next
+        display: inline-flex
+        align-items: center
+        justify-content: center
+    &-next
+        margin-left: 20px
+.form-item__real-radio:checked + .form-item__custom-radio::before
+    display: block
+
+.form-item__real-radio:checked + .form-item__label-text
+    background-color: #2D7439
+    color: $base-color
+.arrow-prev
+    width: 16px
+    height: 8px
+    fill: #949494
+.arrow-next
+    width: 30px
+    height: 16px
+#arrow-next path
+    fill: #fff

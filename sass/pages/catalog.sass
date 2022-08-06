@@ -1,0 +1,229 @@
+/*settings*/
+@import '../style'
+/*section catalog*/
+.catalog
+    padding: 70px 0
+    &-content
+        margin-top: 60px
+        display: flex
+        &__filter-group
+            margin-right: 30px
+            padding-right: 64px
+            width: 371px
+            border-right: 1px solid #000000
+        &__list-project
+            margin-right: -30px
+            display: flex
+            flex-wrap: wrap
+    &__top-filter
+        margin-top: 40px
+        display: none
+        align-items: flex-start
+        justify-content: space-between
+    &__filtering
+        position: relative
+        display: flex
+        width: 227px
+        &-text, &-parameter, &__select
+            font-family: $base-font
+            font-weight: 500
+            font-size: 10px
+            line-height: 12px
+            color: $black-color
+        &-parameter
+            margin-left: 5px
+            padding-bottom: 3px
+            border-bottom: 0.5px solid $black-color
+        &__select
+            padding: 6px 0
+            width: 100%
+            background-color: #ebeae782
+            border: 0
+            border-bottom: 1px solid #000
+            border-radius: 3px
+            &-container
+                position: absolute
+                bottom: -30px
+                right: 0px
+                width: 100%
+                max-width: 136px
+                &::before
+                    content: ""
+                    position: absolute
+                    display: block
+                    width: 15px
+                    height: 15px
+                    top: 50%
+                    right: 0
+                    transform: translateY(-50%)
+                    background-color: #f5f4f3
+
+    &__filters-open
+        width: 27px
+        height: 27px
+        cursor: pointer
+.list-project
+    &__project-card
+        position: relative
+        margin: 0px 30px 30px 0px
+        width: 370px
+        height: 322px
+        &:nth-child(2n+2)
+            margin-right: 0
+            
+.project-card
+    &__img-link-project
+        display: inline-block
+        position: relative
+    &__img
+        width: 370px
+        height: 322px
+    &__hover-project-name
+        position: absolute
+        bottom: 4px
+        left: 0
+        padding: 20px 15px
+        width: 100%
+        font-family: $base-font
+        font-weight: 400
+        font-size: 15px
+        line-height: 18px
+        text-align: center
+        color: #fff
+        background-color: #4E6F9FD4
+        transition: 0.5s
+        opacity: 0
+        cursor: pointer
+
+.list-project__project-card:hover .project-card__hover-project-name
+    opacity: 100%
+.filter
+    &-group
+        margin-bottom: 30px
+        padding-bottom: 30px
+        border-bottom: 0.7px solid #000000
+        &:last-child
+            padding-bottom: none
+            border: none
+        &__cost-filter
+        &__title
+            margin-bottom: 25px
+            font-family: $base-font
+            font-weight: 500
+            font-size: 27px
+            line-height: 33px
+            color: $black-color
+        &__cost-range
+        &__min-range, &__max-range
+            width: 100%
+            max-width: 124px
+        &__min-range
+            margin-right: 58px
+        &__max-range
+        &__form
+            margin-top: 25px
+            display: flex
+            flex-wrap: wrap
+            &-field
+                padding: 6px 13px
+                font-family: $base-font
+                font-weight: 400
+                font-size: 15px
+                line-height: 18px
+                text-align: center
+                color: #393939
+                border: 0.6px solid #000000
+                border-radius: 5px
+        &__form-label
+            position: relative
+            margin-right: 25px
+            margin-bottom: 25px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 0.6px solid #000000
+            border-radius: 5px
+            overflow: hidden
+        &__real-radio
+            position: absolute
+            width: 100%
+            height: 100%
+            opacity: 0
+        &__label-text
+            padding: 4px 13px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            text-align: center
+            color: #393939
+        &__range-line
+            position: relative
+            width: 307px
+            height: 4px
+            background-color: #2E5F3C99
+.range-line
+    &__slide-rail
+        position: absolute
+        width: 100%
+        height: 4px
+        background-color: #2E5F3C
+    &__min, &__max
+        position: absolute
+        top: 50%
+        width: 18px
+        height: 18px
+        transform: translateY(-50%)
+        background: #2E5F3C
+        border-radius: 50%
+        cursor: pointer
+        outline: none
+    &__min
+        left: 0
+    &__max
+        right: 0
+.filter-group__real-radio:checked + .filter-group__label-text
+    background-color: #2E5F3C
+    color: #fff
+.top-filter-icon
+    width: 27px
+    height: 27px
+.show-all-bitch
+    padding: 13px 50px
+    font-family: $base-font
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    text-transform: uppercase
+    color: $base-color
+    background: #2D7439
+    border: 0
+    border-radius: 55px
+.slider
+    &-range
+.ui-widget-header
+    background-color: #2E5F3C
+/*media*/
+@media (max-width: 396px)
+    .catalog
+        padding-top: 40px
+        &__wrapper
+        &-content
+            margin-top: 40px
+            flex-direction: column
+            &__filter-group
+                margin-right: 0
+                padding-right: 0
+                width: 100%
+                border: none
+            
+            &__list-project
+                margin-right: 0
+        &-title
+        &__top-filter
+            display: flex
+    .list-project
+        &__project-card
+            margin: 30px 0px 30px 0px
+            width: 330px
+            height: auto

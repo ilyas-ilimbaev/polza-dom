@@ -1,0 +1,120 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section detailed-info-services*/
+.detailed-info-services
+    position: relative
+    padding: 90px 0
+    padding-bottom: 30px
+.info
+    &-services
+        &-wrapper
+            position: relative
+        &__title-wrapper
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 23px
+                left: 0
+                width: 1268px
+                height: 2px
+                background-color: #038E00
+        &-content
+            display: flex
+            margin-top: 80px
+        &-card
+            margin-right: 30px
+            width: 360px!important
+            background: #2A2A2A
+            &:last-child
+                margin-right: 0
+            &__text
+            &__desc
+                padding: 33px 10px
+        &-slide
+            width: 100%!important
+            display: flex
+            flex-direction: row-reverse
+            &__desc
+                margin-right: 40px
+            &__title
+                font-family: $base-font
+                font-weight: 550
+                font-size: 33px
+                line-height: 40px
+                color: #3DAD4F
+            &__text
+                margin-top: 30px
+                color: $black-color!important
+            &__list-list
+            &__list-item
+                color: #000!important
+                background-image: url(../img/list-style-type-inside.png)
+                background-position: left
+                background-repeat: no-repeat
+                background-size: 16px 16px
+                padding-left: 2rem
+                margin-top: 15px
+                    
+.card-text
+    font-family: $base-font
+    font-weight: 400
+    font-size: 17px
+    line-height: 21px
+    color: $base-color
+/*media*/
+@media (max-width: 396px)
+    .detailed
+        &-container
+            max-width: 100%
+        &-info-services
+            padding: 40px 0
+            background-color: #2a2a2a
+            &::before
+                left: auto
+                right: 0
+                top: 80px
+                width: 90%
+    .info
+        &-services
+            &-wrapper
+                & > .section-title 
+                    color: #FFF
+                    text-align: center
+                &__title-wrapper
+                    position: relative
+            &-content
+                width: 100%
+                margin-top: 0
+                flex-direction: row
+                align-items: flex-start
+            &-swiper
+                margin-top: 53px
+                margin-bottom: 20px
+                background-color: #2a2a2a
+            &-card
+                width: 100% !important
+                margin-right: 0px
+                &__desc
+                    padding: 30px 13px
+                &__img
+                    width: 100%
+                    max-width: 390px
+            &-slide
+                flex-direction: column-reverse
+                &__img
+                    width: 308px
+                    height: 289px
+                &__desc
+                    margin-right: 0
+                    margin-bottom: 20px
+            &-swiper
+                &__design
+                    margin-top: 80px
+                    margin-bottom: 20px
+                    // height: 1037px
+            &-button
+                &-prev, &-next
+                    display: none
