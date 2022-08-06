@@ -44,7 +44,7 @@ foreach ($result as &$dom) {
                         <a href="#" class="catalog__filtering-parameter">рейтингу</a>
                         <div class="catalog__filtering__select-container">
                             <select class="catalog__filtering__select"><option value="1">рейтингу</option>
-                                <option value="2">стоимостm</option>
+                                <option value="2">стоимости</option>
                                 <option value="2">стоимости</option>
                                 <option value="3">популярности</option>
                                 <option value="4">наименованию</option>
