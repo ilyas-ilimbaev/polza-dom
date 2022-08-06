@@ -11,7 +11,7 @@ $password = $_POST['pas'];
 $password = password_hash($password, PASSWORD_DEFAULT);
 
 include '../config.php';
-include '../class/Db.php';
+include '../class/db.php';
 
 $main_base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS, CHARSET, BASE_HOST);
 

@@ -8,7 +8,7 @@ if (!isset($_POST['login'])) {
 $login = $_POST['login'];
 
 include '../config.php';
-include '../class/Db.php';
+include '../class/db.php';
 
 $main_base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS, CHARSET, BASE_HOST);
 

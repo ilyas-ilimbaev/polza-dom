@@ -8,7 +8,7 @@ if (!isset($_POST['filters']) || !isset($_POST['limit'])) {
 }
 
 include '../config.php';
-include '../class/Db.php';
+include '../class/db.php';
 
 $base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS);
 
