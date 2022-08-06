@@ -12,10 +12,12 @@
     <?php
         include ('../blocks/header.php');
     ?>
-    <section class="detailed-info-services">
+    <section class="detailed-info-services black-color">
         <div class="container">
             <div class="info-services-wrapper">
-                <h2 class="section-title">ремонт и отделка</h2>
+                <div class="info-services__title-wrapper">
+                    <h2 class="section-title white-color">ремонт и отделка</h2>
+                </div>
                 <div class="swiper info-services-swiper">
                     <div class="swiper-wrapper info-services-content">
                         <div class="swiper-slide info-services-card">
@@ -47,6 +49,9 @@
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev info-services-button-prev"></div>
                 <div class="swiper-button-next info-services-button-next"></div>
+                
+                  <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </section>

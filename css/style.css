@@ -1382,6 +1382,12 @@ img {
     font-size: 25px;
     line-height: 30px;
   }
+  .black-color {
+    background-color: #2a2a2a;
+  }
+  .white-color {
+    color: #fff;
+  }
   .header {
     height: auto;
     padding: 12px 0;
@@ -1624,12 +1630,6 @@ img {
     width: 100%;
     font-size: 17px;
     line-height: 21px;
-  }
-  .swiper-pagination {
-    display: none;
-  }
-  .swiper-scrollbar {
-    display: block;
   }
 }
 @media (max-width: 360px) {

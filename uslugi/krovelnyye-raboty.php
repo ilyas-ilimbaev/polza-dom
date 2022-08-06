@@ -12,10 +12,12 @@
     <?php
         include ('../blocks/header.php');
     ?>
-    <section class="detailed-info-services">
+    <section class="detailed-info-services black-color">
         <div class="container">
             <div class="info-services-wrapper">
-                <h2 class="section-title">КРОВЕЛЬНЫЕ РАБОТЫ</h2>
+                <div class="info-services__title-wrapper">
+                    <h2 class="section-title white-color">КРОВЕЛЬНЫЕ РАБОТЫ</h2>
+                </div>
                 <div class="info-services-content">
                     <div class="info-services-card">
                         <img src="../img/metallocherepitsa.png" alt="" class="info-services-card__img">

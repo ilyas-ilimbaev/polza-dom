@@ -12,11 +12,11 @@
     <?php
         include ('../blocks/header.php');
     ?>
-    <section class="detailed-info-services">
+    <section class="detailed-info-services black-color">
         <div class="container detailed-container">
             <div class="info-services-wrapper">
                 <div class="info-services__title-wrapper">
-                    <h2 class="section-title">фундаментные работы</h2>
+                    <h2 class="section-title white-color">фундаментные работы</h2>
                 </div>
                 <div class="swiper info-services-swiper">
                     <div class="swiper-wrapper info-services-content">
