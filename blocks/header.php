@@ -98,7 +98,7 @@
         </div> -->
         <div class="header-content__desc">
             <div class="header-text-wrapper">
-                <h1 class="header-title aos-init aos-animate" data-aos="fade-right">строительство домов <span class="green-text">под ключ</span></h1>
+                <h1 class="header-title">строительство домов <span class="green-text">под ключ</span></h1>
                 <p class="header-text">Качественное строительство домов по доступной стоимости</p>
                 <a href="#" class="header-calc-link">Рассчитать стоимость</a>
             </div>

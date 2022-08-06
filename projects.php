@@ -2,7 +2,7 @@
 
 include('config.php');
 
-include('class/db.php');
+include('class/Db.php');
 
 $base = new DataBase(BASE_NAME, BASE_USER, BASE_PASS);
 

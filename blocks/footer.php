@@ -1,7 +1,3 @@
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper footer__wrapper-desk">

@@ -91,6 +91,5 @@
     <script src="/libs/jquery.validate/jquery.validate.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/usset-swiper.js"></script>
-    <script src="/js/popup.js"></script>
 </body>
 </html>

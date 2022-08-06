@@ -1,9 +1,16 @@
+<?php
+
+include 'config.php';
+include 'class/Db.php';
+include 'class/User.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
     <?php
         $link = '
             <link rel="stylesheet" href="css/swiper-bundle/swiper-bundle.min.css" />
-            <link rel="stylesheet" href="css/swiper.css">
             <link rel="stylesheet" href="css/main.css">
         ';
         $script = '
@@ -26,37 +33,37 @@
     <section class="benefits">
         <div class="container">
             <div class="benefits__wrapper">
-                <h2 class="section-title benefits-title aos-init aos-animate" data-aos="fade-down" data-aos-duration="600">почему выбирают нас <span class="benefits-mob"> для <br> строительства домов и коттеджей</span></h2>
+                <h2 class="section-title benefits-title">почему выбирают нас <span class="benefits-mob"> для <br> строительства домов и коттеджей</span></h2>
                 <div class="benefits-items__wrapper">
-                    <div class="benefits-item aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                    <div class="benefits-item">
                         <div class="benefits-item__img-wrapper">
                             <img src="<?= create_url_img("calc.png") ?>" alt="" class="benefits-item__img">
                         </div>
                         <h4 class="benefits-item__title">РАСЧЕТ СМЕТЫ ПОД <br> ВАШ БЮДЖЕТ</h4>
                     </div>
 
-                    <div class="benefits-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
+                    <div class="benefits-item">
                         <div class="benefits-item__img-wrapper">
                             <img src="img/services.png" alt="" class="benefits-item__img">
                         </div>
                         <h4 class="benefits-item__title">КАЧЕСТВЕННОЕ ВЫПОЛНЕНИЕ ВСЕГО КОМПЛЕКСА СТРОИТЕЛЬНЫХ УСЛУГ</h4>
                     </div>
 
-                    <div class="benefits-item aos-init aos-animate" data-aos="fade-right" data-aos-duration="800">
+                    <div class="benefits-item">
                         <div class="benefits-item__img-wrapper">
                             <img src="img/warranty.png" alt="" class="benefits-item__img">
                         </div>
                         <h4 class="benefits-item__title">ГАРАНТИЯ НА <br> СТРОИТЕЛЬСТВО 5 ЛЕТ</h4>
                     </div>
 
-                    <div class="benefits-item aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                    <div class="benefits-item">
                         <div class="benefits-item__img-wrapper">
                             <img src="img/home.png" alt="" class="benefits-item__img">
                         </div>
                         <h4 class="benefits-item__title">ПРОФЕССИОНАЛЬНЫЙ ПОДХОД К СТРОТЕЛЬСТВУ ВАШЕГО ДОМА</h4>
                     </div>
 
-                    <div class="benefits-item aos-init aos-animate" data-aos="fade-right" data-aos-duration="800">
+                    <div class="benefits-item">
                         <div class="benefits-item__img-wrapper">
                             <img src="img/checkmark-icon.png" alt="" class="benefits-item__img">
                         </div>
@@ -171,37 +178,37 @@
                     <div class="calc-content__container-slide" data-slide-num="1">
                         <h3 class="calc-content__title">Какой дом необходимо построить?</h3>
                         <div class="calc-content__cards-wrapper calc-content__house-types">
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Brick-house.png" alt="Дом из кирпича" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из кирпича</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Timber-house.png" alt="Дом из бруса" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из бруса</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Log-house.png" alt="Дом из бревна" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из бревна</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="450">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-House-of-tiles.png" alt="Дом из панелей" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из панелей</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Block-house.png" alt="Дом из блоков" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из блоков</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="750">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Frame-house.png" alt="Каркасный дом" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Каркасный дом</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-House-carriage.png" alt="Дом из лафета" class="calc-content__img">
                                 <input type="radio" name="house-of-brick" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Дом из лафета</a>
@@ -342,7 +349,7 @@
                     <div class="calc-content__container-slide" data-slide-num="1">
                         <h3 class="calc-content__title">Какую недвижимость хотите приобрести?</h3>
                         <div class="calc-content__cards-wrapper calc-content__house-types" style="display: flex; justify-content: center">
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/sectionCalculate-img-Brick-house.png" alt="Дом из кирпича" class="calc-content__img">
                                 <input type="radio" name="house-of-brick-1" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Загородный дом</a>
@@ -466,47 +473,47 @@
                     <div class="calc-content__container-slide" data-slide-num="1">
                         <h3 class="calc-content__title">Какая услуга Вас интересует?</h3>
                         <div class="calc-content__cards-wrapper calc-content__house-types">
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-1.png" alt="Проектирование дома" class="calc-content__img">
                                 <input data-id="service-1" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Проектирование дома</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-2.png" alt="Земляные работы. Планировка участка" class="calc-content__img">
                                 <input data-id="service-2" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Земляные работы. <br>Планировка участка</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-3.png" alt="Фундаментные работы" class="calc-content__img">
                                 <input data-id="service-3" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Фундаментные работы</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-4.png" alt="Возведение и кладка стен" class="calc-content__img">
                                 <input data-id="service-4" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Возведение и кладка стен</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-5.png" alt="Устройство межэтажных перекрытий" class="calc-content__img">
                                 <input data-id="service-5" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Устройство межэтажных перекрытий</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-6.png" alt="Кровельные работы" class="calc-content__img">
                                 <input data-id="service-6" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Кровельные работы</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-7.png" alt="Фасадные работы" class="calc-content__img">
                                 <input data-id="service-7" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Фасадные работы</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-8.png" alt="Ремонт и отделка" class="calc-content__img">
                                 <input data-id="service-8" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Ремонт и отделка</a>
                             </label>
-                            <label class="calc-content__card aos-init aos-animate" data-aos="fade-left" data-aos-duration="800">
+                            <label class="calc-content__card">
                                 <img src="img/service-9.png" alt="Монтаж коммуникации" class="calc-content__img">
                                 <input data-id="service-9" type="radio" name="service-main" class="calc-content__input-choice">
                                 <a href="" class="calc-content__card-link">Монтаж коммуникации</a>
@@ -2121,35 +2128,6 @@
                 choose_tab(calc)
             })
         })
-
-        function ajaxPost(url, parameters, callback) {
-            // parameters = encodeURIComponent(parameters)
-            if (parameters === false || parameters === null || parameters === undefined) {
-                parameters = "";
-            }
-            var request = new XMLHttpRequest();
-            request.open('POST', url, true);
-            request.addEventListener('readystatechange', function() {
-                if ((request.readyState == 4) && (request.status == 200)) {
-                    callback(request.responseText)
-                } else {
-                    if (request.readyState == 0) {
-                        // Request not initialized
-                        console.log('Request not initialized')
-                    }
-                    if (request.status == 403) {
-                        // Forbidden
-                        console.log('Forbidden')
-                    }
-                    if (request.status == 404) {
-                        // Not Found
-                        console.log('Not Found')
-                    }
-                }
-            });
-            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-            request.send(parameters);
-        }
     </script>
 </body>
 

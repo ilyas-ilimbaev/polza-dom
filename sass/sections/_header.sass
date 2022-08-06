@@ -27,7 +27,6 @@
         &-item
             margin-left: 40px
         &-link
-            position: relative
             font-family: $base-font
             font-size: 17px
             font-weight: 400
@@ -35,19 +34,6 @@
             letter-spacing: 0em
             color: $base-color
             text-align: left
-            &::after
-                content: ""
-                position: absolute
-                display: block
-                width: 100%
-                height: 1px
-                background-color: #fff
-                bottom: -5px
-                left: 0
-                opacity: 0
-                transition-duration: .3s
-            &:hover.header-list-link::after
-                opacity: 1
     &-search
         &-item
             margin-left: 30px
@@ -87,10 +73,8 @@
         text-align: center
         text-transform: uppercase
         color: $base-color
-        background: #2d7439
+        background: #2D7439
         border-radius: 45px
-        &:hover
-            background-color:rgb(65, 154, 80)
     &-content
         position: relative
         height: 620px
@@ -129,26 +113,12 @@
         &-item
             margin-bottom: 20px
         &-link
-            position: relative
             font-family: $base-font
             font-weight: 400
             font-size: 27px
             line-height: 33px
             color: $black-color
             cursor: pointer
-            &::after
-                content: ""
-                position: absolute
-                display: block
-                width: 100%
-                height: 2px
-                background-color: #000
-                bottom: -5px
-                left: 0
-                opacity: 0
-                transition-duration: .3s
-            &:hover.header-menu-link::after
-                opacity: 1
         &-line
             width: 372px
             height: 1px
