@@ -15,7 +15,7 @@
                     </svg>
                 </a>
                 <ul class="footer-list">
-                    <li class="footer-list-item"><a href="" class="footer-list-item-link">Компания</a></li>
+                    <li class="footer-list-item"><a href="/about" class="footer-list-item-link">Компания</a></li>
                     <li class="footer-list-item"><a href="/catalog" class="footer-list-item-link">Каталог</a></li>
                     <li class="footer-list-item"><a href="/contacts" class="footer-list-item-link">Контакты</a></li>
                     <li class="footer-list-item"><a href="/services" class="footer-list-item-link">Услуги</a></li>

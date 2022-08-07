@@ -23,19 +23,10 @@
   src: url("../sass/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2");
 }
 /*section detailed-info-services*/
-.detailed-info-services {
-  position: relative;
-  padding: 90px 0;
-  padding-bottom: 30px;
-}
-
-.info-services-wrapper {
+.section-title__wrapper {
   position: relative;
 }
-.info-services__title-wrapper {
-  position: relative;
-}
-.info-services__title-wrapper::before {
+.section-title__wrapper::before {
   content: "";
   display: block;
   position: absolute;
@@ -45,6 +36,28 @@
   height: 2px;
   background-color: #038E00;
   transform: translateX(-50%);
+}
+.section-title__right-block {
+  margin-left: 50px;
+}
+
+.right-block {
+  margin-right: 60px;
+  font-weight: 600;
+  color: #3DAD4F;
+}
+.right-block:last-child {
+  margin-right: 0;
+}
+
+.detailed-info-services {
+  position: relative;
+  padding: 90px 0;
+  padding-bottom: 30px;
+}
+
+.info-services-wrapper {
+  position: relative;
 }
 .info-services-content {
   display: flex;

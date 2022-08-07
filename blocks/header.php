@@ -4,7 +4,7 @@
             <div class="header-top">
                 <div class="header-nav">
                     <div class="header-nav-left">
-                        <a href="/index.php" class="logo">
+                        <a href="/" class="logo">
                             <span class="logo-text">
                                 <span class="green-text">ПОЛЬЗА</span> ДОМ
                             </span>
@@ -17,16 +17,16 @@
                                 <a href="/catalog" class="header-list-link">Каталог</a>
                             </li>
                             <li class="header-list-item">
-                                <a href="/services.php" class="header-list-link">Услуги</a>
+                                <a href="/services" class="header-list-link">Услуги</a>
                             </li>
                             <li class="header-list-item">
-                                <a href="/" class="header-list-link">О компании</a>
+                                <a href="/about" class="header-list-link">О компании</a>
                             </li>
                             <li class="header-list-item">
-                                <a href="/uslugi/proektirovanie.php" class="header-list-link">Проектирование</a>
+                                <a href="/uslugi/proektirovanie" class="header-list-link">Проектирование</a>
                             </li>
                             <li class="header-list-item">
-                                <a href="/stages-work.php" class="header-list-link">Этапы работ</a>
+                                <a href="/stages-work" class="header-list-link">Этапы работ</a>
                             </li>
                         </ul>
                     </div>
@@ -54,22 +54,22 @@
                 <div class="header-menu">
                     <ul class="header-menu-list">
                         <li class="header-menu-item">
-                            <a href="/catalog.php" class="header-menu-link">Каталог</a>
+                            <a href="/catalog" class="header-menu-link">Каталог</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/services.php" class="header-menu-link">Услуги</a>
+                            <a href="/services" class="header-menu-link">Услуги</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/" class="header-menu-link">О компании</a>
+                            <a href="/about" class="header-menu-link">О компании</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/" class="header-menu-link">Этапы строительства</a>
+                            <a href="/stages-work" class="header-menu-link">Этапы строительства</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/uslugi/proektirovanie.php" class="header-menu-link">Проектирование</a>
+                            <a href="/uslugi/proektirovanie" class="header-menu-link">Проектирование</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/ourworks.php" class="header-menu-link">Наши работы</a>
+                            <a href="/ourworks" class="header-menu-link">Наши работы</a>
                         </li>
                         <li class="header-menu-item">
                             <a href="/" class="header-menu-link">Ипотека и кредит</a>
@@ -98,7 +98,7 @@
         </div> -->
         <div class="header-content__desc">
             <div class="header-text-wrapper">
-                <h1 class="header-title aos-init aos-animate" data-aos="fade-right">строительство домов <span class="green-text">под ключ</span></h1>
+                <h1 class="header-title aos-init aos-animate" data-aos="fade-right">строительство домов <span class="green-text aos-init aos-animate" data-aos="fade-right">под ключ</span></h1>
                 <p class="header-text">Качественное строительство домов по доступной стоимости</p>
                 <a href="#" class="header-calc-link">Рассчитать стоимость</a>
             </div>

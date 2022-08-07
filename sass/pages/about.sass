@@ -1,0 +1,73 @@
+/*переменные*/
+@import '../variables'
+/*шрифты*/
+@import '../fonts/fonts'
+/*section about*/
+.about
+    padding-top: 80px
+    &__wrapper
+    & .section-title
+        margin-bottom: 20px
+        display: inline-flex
+    &-content
+        margin-top: 45px
+        padding-bottom: 45px
+        display: flex
+        align-items: center
+        border-bottom: 2px solid #038E00
+        &-desc, &-img
+            width: 50%
+        &-img
+            margin-left: 30px
+        &-title
+            font-family: $base-font
+            font-weight: 600
+            font-size: 40px
+            line-height: 49px
+            text-transform: uppercase
+            color: $black-color
+        &-text
+            margin-top: 30px
+            font-family: $base-font
+            font-weight: 400
+            font-size: 17px
+            line-height: 21px
+            color: $black-color
+    &-img
+        width: 570px
+        height: 385px
+        object-fit: contain
+
+
+.section-title
+    &__item
+        &-left
+            width: 50%
+            &::before
+                background-color: #038E00
+        &-left, &-right
+            position: relative
+        &-left::before, &-right::before
+            content: ""
+            position: absolute
+            bottom: -20px
+            left: 0
+            width: 100%
+            height: 2px
+        &-right
+            margin-right: 60px
+            font-weight: 600
+            color: #3DAD4F
+            text-align: center
+            &:last-child
+                margin-right: 0
+            &::before
+                background-color: #D8D8D8
+    &__right-block
+        margin-left: 40px
+        width: 50%
+        display: flex
+        align-items: center
+
+
+

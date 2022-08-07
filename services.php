@@ -91,7 +91,8 @@
             </div>
         </div>
     </section>
-    <section class="newsletter">
+
+    <!-- <section class="newsletter">
         <div class="container">
             <div class="newsletter__wrapper">
                 <h3 class="newsletter-title">
@@ -108,7 +109,11 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
+    
+    <?php
+        include ('blocks/newsletter.php');
+    ?>
     <?php
         include ('blocks/popups.php');
     ?>  

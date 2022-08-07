@@ -3,6 +3,27 @@
 /*шрифты*/
 @import '../fonts/fonts'
 /*section detailed-info-services*/
+.section-title
+    &__wrapper
+        position: relative
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            bottom: -23px
+            left: 39.1%
+            width: 1268px
+            height: 2px
+            background-color: #038E00
+            transform: translateX(-50%)
+    &__right-block
+        margin-left: 50px
+.right-block
+    margin-right: 60px
+    font-weight: 600
+    color: #3DAD4F
+    &:last-child
+        margin-right: 0    
 .detailed-info-services
     position: relative
     padding: 90px 0
@@ -11,18 +32,6 @@
     &-services
         &-wrapper
             position: relative
-        &__title-wrapper
-            position: relative
-            &::before
-                content: ""
-                display: block
-                position: absolute
-                bottom: -23px
-                left: 39.1%
-                width: 1268px
-                height: 2px
-                background-color: #038E00
-                transform: translateX(-50%)
         &-content
             display: flex
             margin-top: 80px

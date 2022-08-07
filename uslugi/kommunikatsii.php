@@ -15,7 +15,7 @@
     <section class="detailed-info-services black-color">
         <div class="container">
             <div class="info-services-wrapper">
-                <div class="info-services__title-wrapper">
+                <div class="section-title__wrapper">
                     <h2 class="section-title white-color">Коммуникации</h2>
                 </div>
                 <div class="swiper info-services-swiper">

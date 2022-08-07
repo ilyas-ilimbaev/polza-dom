@@ -26,8 +26,10 @@ foreach ($result as &$dom) {
 <html lang="ru">
     <?php
         $link = '<link rel="stylesheet" href="css/catalog.css">';
-        $script = '<script src="https://code.jquery.com/jquery-3.6.0.js"></script>';
-        $script = '<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>';
+        $script = '
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        ';
         include('blocks/head.php');
     ?>
 <body>
