@@ -133,7 +133,19 @@ img
     font-size: 37px
     line-height: 45px
     text-transform: uppercase
-    color: #000000
+    color: $black-color
+    &__wrapper
+        position: relative
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            bottom: -15px
+            left: 39.1%
+            width: 1268px
+            height: 2px
+            background-color: #038E00
+            transform: translateX(-50%)
 .logo
     position: relative
     width: 124px
@@ -164,3 +176,11 @@ img
     height: 16px
     margin-right: 10px
     background-image: url(../img/arrow-left.png)
+
+@media (max-width: 396px)
+    .section-title__wrapper 
+        text-align: center
+        &::before
+            left: 0
+            width: 100%
+            transform: none

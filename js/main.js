@@ -1,3 +1,4 @@
+const bodyEl = document.body;
 const toggleMenu = document.querySelector(".toggle-menu"); // gamburger icon
 const headerMenu = document.querySelector(".header-menu"); // menu list
 const overlay = document.querySelector("#overlay"); // overlay block
@@ -12,6 +13,7 @@ toggleMenu.addEventListener("click", function () {
     this.classList.toggle("toggle-menu--active");
     headerMenu.classList.toggle("active");
     overlay.classList.toggle("active");
+    bodyEl.classList.toggle("noscroll");
 });
 overlay.addEventListener("click", function () {
     this.classList.remove("toggle-menu--active");

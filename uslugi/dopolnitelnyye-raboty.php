@@ -13,7 +13,7 @@
         include ('../blocks/header.php');
     ?>
     <section class="detailed-info-services black-color">
-        <div class="container">
+        <div class="container detailed-container">
             <div class="info-services-wrapper">
                 <div class="section-title__wrapper">
                     <h2 class="section-title white-color">Дополнительные работы</h2>

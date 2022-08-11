@@ -36,14 +36,14 @@
             line-height: 18px
             text-align: center
             color: $black-color
-        &__img-wrapper
+        &__img
             width: 150px
             height: 150px
-            margin-bottom: 20px
-            display: flex
-            align-items: center
-            justify-content: center
-        &__img
+            &-wrapper
+                margin-bottom: 20px
+                display: flex
+                align-items: center
+                justify-content: center
 .top-house
     &__wrapper
         &-slide
@@ -52,8 +52,9 @@
         width: 570px !important
         display: flex
         background-color: #262626
-        &:nth-child(2n+2)
-            margin-right: 0      
+        &:last-child
+            margin-right: 0
+                
         &-img
             width: 351px
             display: flex
@@ -74,9 +75,14 @@
             font-weight: 400
         &-link
             &-more
+                position: relative
+                display: inline-block
                 margin-top: 0
                 padding-bottom: 3px
                 border-bottom: 0.7px solid #FFFFFF
+                & > .button-next
+                    margin-left: 8px
+                    position: absolute
         &-container
             position: relative
             margin-top: 70px
@@ -333,7 +339,7 @@
         background: #2D7439
         border-radius: 55px
         border: none
-@media (max-width: 390px)
+@media (max-width: 396px)
     .benefits
         padding-top: 50px
         &-title
@@ -349,6 +355,43 @@
             &__title
                 font-size: 10px
                 line-height: 12px
-            &__img-wrapper
+            &__img
                 width: 90px
                 height: 90px
+                &-wrapper
+                    margin-bottom: 10px
+    .top-house
+        padding-bottom: 50px
+        &__swiper > .swiper-wrapper
+            flex-direction: column
+        &__slide
+            margin-right: 0
+            margin-bottom: 30px
+            width: 329px !important
+            &:last-child
+                margin-bottom: 0
+            &-container
+                margin-top: 40px
+                & > .swiper-button-next, .swiper-button-prev
+                    display: none
+            &-title
+                font-size: 12px
+                line-height: 15px
+            &-content
+                padding: 15px 6px 15px 6px
+            &-desc
+                margin-bottom: 24px
+            &-text
+                margin-top: 15px
+                font-size: 12px
+                line-height: 15px
+            &-img
+                width: 202px
+                height: 217px
+    .calc
+        &-tabs
+            margin-right: 0
+            padding: 50px 25px
+            height: 640px
+        &-content
+            display: none

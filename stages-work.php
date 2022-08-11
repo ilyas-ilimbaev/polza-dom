@@ -13,7 +13,9 @@
     <section class="stages-work">
         <div class="container">
             <div class="stages-work__wrapper">
-                <h2 class="section-title">этапы строительства дома</h2>
+                <div class="section-title__wrapper">
+                    <h2 class="section-title">этапы строительства дома</h2>
+                </div>
                 <div class="stages-work__content">
                     <div class="stages-work__card-wrapper">
                         <div class="stages-work__card">
@@ -48,9 +50,30 @@
             <img src="/img/stages-works-bg.png" alt="этапы строительства дома" class="stages-work__img">
         </div>
     </section>
-    <section class="section-benefits">
-        <div class="container">
-            
+    <section class="benefits-product">
+        <div class="container benefits-product-container">
+            <div class="benefits-product__wrapper">
+                <div class="benefits-product__desc">
+                    <h2 class="section-title">Преимущества газобетона</h2>
+                    <div class="benefits-product__list">
+                        <p class="benefits-product__list-item">
+                            <span class="item-modification-color">Теплоизоляция конструкции</span> – блоки имеют высокие показатели теплоизоляции, они долго удерживают тепло в помещении, что позволяет сэкономить на отоплении здания, подходят для дополнительного утепления строений.
+                        </p>
+                        <p class="benefits-product__list-item">
+                            <span class="item-modification-color">Удобство в использовании</span> – газобетон легко поддается дополнительной обработке подручными материалами, его можно резать, пилить, сверлить. Из газоблоков можно сформировать арочные проемы и другие сложные конструкции.
+                        </p>
+                        <p class="benefits-product__list-item">
+                            <span class="item-modification-color">Геометрия</span> – предлагается большое многообразие форм и размеров блоков, различной длины и толщины. Блоки имеют точную нарезку, поверхность ровная, максимальное отклонение, которое возможно – 1 мм.
+                        </p>
+                        <p class="benefits-product__list-item">
+                            <span class="item-modification-color">Огнестойкость</span> – блоки совершенно безопасны, при нагревании не выделяются токсичные вещества, они не горят и не плавятся. Газобетон способен выдерживать до 3 часов воздействия огня без потери технических свойств.
+                        </p>
+                    </div>
+                </div>
+                <div class="benefits-product__img-box">
+                    <img src="/img/benefits-gazobeton.png" alt="Преимущество газобетона" class="benefits-product__img">
+                </div>
+            </div>
         </div>
     </section>
     <?php

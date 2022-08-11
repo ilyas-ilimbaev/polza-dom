@@ -30,6 +30,7 @@
   margin: 0 auto;
 }
 .stages-work__content {
+  margin-top: 70px;
   display: flex;
 }
 .stages-work__content-img {
@@ -43,7 +44,6 @@
   flex: 0 0 100%;
 }
 .stages-work__card-wrapper {
-  margin-top: 70px;
   width: 660px;
   display: flex;
   flex-wrap: wrap;
@@ -75,4 +75,91 @@
   line-height: 17px;
   text-align: center;
   color: #000;
+}
+
+.benefits-product {
+  background-color: #2A2A2A;
+}
+.benefits-product-container {
+  margin: 0 0 0 auto;
+  max-width: 1268px;
+}
+.benefits-product__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.benefits-product__desc {
+  margin-right: 47px;
+  padding: 40px 0 92px 0;
+}
+.benefits-product__desc > .section-title {
+  color: #FFFFFF;
+}
+.benefits-product__list {
+  margin-top: 30px;
+}
+.benefits-product__list-item {
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.benefits-product__list-item:last-child {
+  margin-bottom: 0;
+}
+.benefits-product__img {
+  width: 598px;
+  height: 629px;
+}
+.benefits-product__img-box {
+  flex-shrink: 0;
+}
+
+.item-modification-color {
+  font-weight: 500;
+  color: #57C54E;
+}
+
+@media (min-width: 1550px) {
+  .benefits-product-container {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}
+@media (max-width: 396px) {
+  .stages-work__img {
+    display: none;
+  }
+  .stages-work__content {
+    margin-top: 25px;
+  }
+  .stages-work__card-wrapper {
+    width: 100%;
+  }
+  .stages-work__card {
+    padding: 5px;
+    width: 140px;
+  }
+  .stages-work__card:nth-child(2n+2) {
+    margin-right: 0;
+  }
+  .stages-work__card:nth-child(3n+3) {
+    margin-right: 30px;
+  }
+  .stages-work__card:last-child {
+    margin-right: 0;
+  }
+  .stages-work__card-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 26px;
+  }
+  .stages-work__card-text {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 13px;
+  }
 }

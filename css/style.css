@@ -183,7 +183,21 @@ img {
   font-size: 37px;
   line-height: 45px;
   text-transform: uppercase;
-  color: #000000;
+  color: #000;
+}
+.section-title__wrapper {
+  position: relative;
+}
+.section-title__wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 39.1%;
+  width: 1268px;
+  height: 2px;
+  background-color: #038E00;
+  transform: translateX(-50%);
 }
 
 .logo {
@@ -224,6 +238,16 @@ img {
   background-image: url(../img/arrow-left.png);
 }
 
+@media (max-width: 396px) {
+  .section-title__wrapper {
+    text-align: center;
+  }
+  .section-title__wrapper::before {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+}
 /*секции*/
 .header {
   position: relative;
@@ -414,7 +438,8 @@ img {
   top: 0;
   right: 0;
   width: 941px;
-  border: 2px solid #038E00;
+  height: 2px;
+  background-color: #038E00;
 }
 .more::after {
   content: "";
@@ -423,7 +448,8 @@ img {
   bottom: 0;
   left: 0;
   width: 489px;
-  border: 2px solid #038E00;
+  height: 2px;
+  background-color: #038E00;
 }
 .more__wrapper {
   display: flex;
@@ -751,6 +777,7 @@ img {
   height: 505px;
   object-fit: contain;
   object-position: bottom;
+  z-index: -1;
 }
 
 .popup {
@@ -1266,7 +1293,6 @@ img {
   margin-right: 0px;
 }
 
-/*animation*/
 /*order-form*/
 /*mobile and toggle menu*/
 .toggle-menu {
@@ -1369,6 +1395,9 @@ img {
 
 /*адаптив*/
 @media (max-width: 396px) {
+  body.noscroll {
+    overflow: hidden;
+  }
   .container {
     max-width: 330px;
   }
@@ -1489,14 +1518,6 @@ img {
   }
   .reviews-comment__wrapper {
     margin-right: 0;
-  }
-  .calc-tabs {
-    margin-right: 0;
-    padding: 50px 25px;
-    height: 640px;
-  }
-  .calc-content {
-    display: none;
   }
   .newsletter {
     padding: 30px 24px;

@@ -38,10 +38,10 @@
                             </div>
                         </div>
                         <div class="contacts-content__item">
-                            <a href="tel:+7 (495) 818-23-15" class="contacts-content__list-link">+7 (495) 818-23-15</a>
+                            <a href="tel:+7 (495) 818-23-15" class="contacts-content__list-link contacts-link-phone">+7 (495) 818-23-15</a>
                         </div>
                         <div class="contacts-content__item">
-                            <a href="/" class="contacts-content__list-link contacts__color-font">PolsaDom.com</a>
+                            <a href="/" class="contacts-content__list-link contacts__color-font contacts-link-adress">PolsaDom.com</a>
                         </div>
                     </div>
                     <div class="contacts-content__right">

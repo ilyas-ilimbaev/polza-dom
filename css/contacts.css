@@ -81,3 +81,37 @@
   line-height: 33px;
   color: #000000;
 }
+
+@media (max-width: 396px) {
+  .contacts {
+    padding: 40px 0;
+  }
+  .contacts-content {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .contacts-content__item {
+    margin-bottom: 20px;
+  }
+  .contacts-content__left, .contacts-content__right {
+    width: auto;
+  }
+  .contacts-content__list-link {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .contacts-title {
+    padding-bottom: 10px;
+  }
+  .contacts-link-phone, .contacts-link-adress {
+    font-weight: 500;
+  }
+  .contacts-map-img {
+    width: 311px;
+    height: 296px;
+  }
+  .item-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

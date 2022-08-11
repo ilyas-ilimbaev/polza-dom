@@ -6,14 +6,17 @@
 .about
     padding-top: 80px
     &__wrapper
-    & .section-title
-        margin-bottom: 20px
-        display: inline-flex
+        display: grid
+        grid-template-rows: 1fr auto
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        grid-gap: 0 40px
     &-content
-        margin-top: 45px
+        margin-top: 65px
         padding-bottom: 45px
         display: flex
         align-items: center
+        grid-row: 2
+        grid-column: 1/3
         border-bottom: 2px solid #038E00
         &-desc, &-img
             width: 50%
@@ -37,37 +40,87 @@
         width: 570px
         height: 385px
         object-fit: contain
-
-
-.section-title
-    &__item
-        &-left
-            width: 50%
-            &::before
-                background-color: #038E00
-        &-left, &-right
-            position: relative
-        &-left::before, &-right::before
-            content: ""
-            position: absolute
-            bottom: -20px
-            left: 0
-            width: 100%
-            height: 2px
-        &-right
-            margin-right: 60px
-            font-weight: 600
-            color: #3DAD4F
-            text-align: center
-            &:last-child
-                margin-right: 0
-            &::before
-                background-color: #D8D8D8
-    &__right-block
-        margin-left: 40px
-        width: 50%
+    &-top
         display: flex
         align-items: center
-
-
-
+        &__text
+            &-left, &-right
+                position: relative
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: -20px
+                    left: 0
+                    width: 100%
+                    height: 2px
+            &-left
+                &::before
+                    background-color: #038E00
+            &-right
+                margin-right: 60px
+                font-family: $base-font
+                font-weight: 600
+                font-size: 37px
+                line-height: 45px
+                text-transform: uppercase
+                color: #3DAD4F
+                text-align: center
+                &:last-child
+                    margin-right: 0
+                &::before
+                    background-color: #D8D8D8
+        &__block
+            &-left
+                grid-row: 1/2
+                grid-column: 1/2
+            &-right
+                display: flex
+                align-items: center
+                grid-row: 1/2
+                grid-column: 2/3
+@media (max-width: 396px)
+    .about
+        padding-top: 40px
+        &__wrapper
+            grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr))
+            grid-template-columns: 100%
+        &-content
+            margin: 25px 0
+            padding: 0
+            grid-row: 2/2
+            grid-column: 1/2
+            flex-direction: column
+            border: 0
+            &-title
+                font-size: 21px
+                line-height: 26px
+            &-text
+                margin-top: 20px
+            &-desc, &-img
+                width: auto
+            &-desc
+            &-img
+                margin-top: 25px
+                margin-left: 0
+        &-img
+            width: 322px
+            height: 218px  
+        &-top
+            &__text
+                &-left, &-right
+                    font-size: 21px
+                    line-height: 26px
+                &-right
+                    margin-right: 30px
+                    &::before
+                        display: none
+            &__block
+                &-left
+                    margin-bottom: 18px
+                    grid-row: 1/1
+                    grid-column: 1/2
+                &-right
+                    grid-row: 3/3
+                    grid-column: 1/2
+                    border-bottom: 2px solid #038E00
+                    padding-bottom: 30px

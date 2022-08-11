@@ -19,17 +19,19 @@
     <section class="about">
         <div class="container">
             <div class="about__wrapper">
-                <h2 class="section-title">
-                    <span class="section-title__item-left">Заказать строительство дома у нас - это</span>
-                    <span class="section-title__right-block">
-                        <span class="section-title__item-right">
-                            70 проектов
-                        </span>
-                        <span class="section-title__item-right">
-                            Более 10 лет на рынке
-                        </span>
+                <div class="about-top__block-left">
+                    <h2 class="section-title about-top__text-left">
+                        Заказать строительство дома у нас - это
+                    </h2>
+                </div>
+                <div class="about-top__block-right">
+                    <span class="about-top__text-right">
+                        70 проектов
                     </span>
-                </h2>
+                    <span class="about-top__text-right">
+                        Более 10 лет на рынке
+                    </span>
+                </div>
                 <div class="about-content">
                     <div class="about-content-desc">
                         <h3 class="about-content-title">качественно и выгодно</h3>

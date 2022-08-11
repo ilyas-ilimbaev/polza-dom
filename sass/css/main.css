@@ -62,21 +62,24 @@
   text-align: center;
   color: #000;
 }
-.benefits-item__img-wrapper {
+.benefits-item__img {
   width: 150px;
   height: 150px;
+}
+.benefits-item__img-wrapper {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .top-house__slide {
   margin-right: 30px;
   width: 570px !important;
   display: flex;
   background-color: #262626;
 }
-.top-house__slide:nth-child(2n+2) {
+.top-house__slide:last-child {
   margin-right: 0;
 }
 .top-house__slide-img {
@@ -101,9 +104,15 @@
   font-weight: 400;
 }
 .top-house__slide-link-more {
+  position: relative;
+  display: inline-block;
   margin-top: 0;
   padding-bottom: 3px;
   border-bottom: 0.7px solid #FFFFFF;
+}
+.top-house__slide-link-more > .button-next {
+  margin-left: 8px;
+  position: absolute;
 }
 .top-house__slide-container {
   position: relative;
@@ -404,7 +413,7 @@
   border: none;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 396px) {
   .benefits {
     padding-top: 50px;
   }
@@ -425,8 +434,58 @@
     font-size: 10px;
     line-height: 12px;
   }
-  .benefits-item__img-wrapper {
+  .benefits-item__img {
     width: 90px;
     height: 90px;
+  }
+  .benefits-item__img-wrapper {
+    margin-bottom: 10px;
+  }
+  .top-house {
+    padding-bottom: 50px;
+  }
+  .top-house__swiper > .swiper-wrapper {
+    flex-direction: column;
+  }
+  .top-house__slide {
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 329px !important;
+  }
+  .top-house__slide:last-child {
+    margin-bottom: 0;
+  }
+  .top-house__slide-container {
+    margin-top: 40px;
+  }
+  .top-house__slide-container > .swiper-button-next, .top-house__slide-container .swiper-button-prev {
+    display: none;
+  }
+  .top-house__slide-title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .top-house__slide-content {
+    padding: 15px 6px 15px 6px;
+  }
+  .top-house__slide-desc {
+    margin-bottom: 24px;
+  }
+  .top-house__slide-text {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .top-house__slide-img {
+    width: 202px;
+    height: 217px;
+  }
+  .calc-tabs {
+    margin-right: 0;
+    padding: 50px 25px;
+    height: 640px;
+  }
+  .calc-content {
+    display: none;
   }
 }
