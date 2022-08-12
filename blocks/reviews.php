@@ -95,7 +95,7 @@
                                 <input type="email" class="reviews-form__input reviews-input-email">
                             </div>
                         </div>
-                        <button class="reviews-form__submit" type="button">оставить отзыв</button>
+                        <button class="reviews-form__submit send-btn" type="button">оставить отзыв</button>
                     </form>
                 </div>
             </div>

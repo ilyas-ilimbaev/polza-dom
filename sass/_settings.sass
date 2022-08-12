@@ -57,7 +57,13 @@ img
     width: 20px
     height: 20px
     display: inline-block
-
+.list-style-type
+    &-circle
+        background-image: url(../img/list-style-type-inside.png)
+        background-position: left
+        background-repeat: no-repeat
+        background-size: 16px 16px
+        padding-left: 2rem
 .search
     &-input
         display: flex
@@ -125,7 +131,21 @@ img
     &-question-icon
         width: 29px
         height: 29px
-
+.send-btn
+    display: inline-block
+    padding: 19px 30px
+    max-width: 236px
+    height: 56px
+    font-family: $base-font
+    font-size: 17px
+    line-height: 21px
+    text-transform: uppercase
+    color: $base-color
+    background: #2D7439
+    border: none
+    border-radius: 55px
+    outline: none
+    cursor: pointer
 .section-title
     font-family: $base-font
     font-style: normal
@@ -176,6 +196,19 @@ img
     height: 16px
     margin-right: 10px
     background-image: url(../img/arrow-left.png)
+
+.modified
+    &-item
+        &-color
+            font-weight: 500
+            color: #57C54E
+    &-text
+        &-bold
+            font-family: $base-font
+            font-weight: 600
+            font-size: 33px
+            line-height: 40px
+            color: $black-color
 
 @media (max-width: 396px)
     .section-title__wrapper 

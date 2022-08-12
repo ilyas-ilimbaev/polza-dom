@@ -7,6 +7,8 @@ const authorization = document.querySelector(".popup-login"); // link-auth
 const register = document.querySelector(".popup-register"); // link-register
 const linkRegister = document.querySelector(".popup-link-register");
 const calculationCost = document.querySelector(".header-calc-link");
+const link_Mortgage = document.querySelector(".link-item-mortgage");
+const popup_Mortgage = document.querySelector(".popup-mortgage");
 const popupClose = document.querySelector(".popup-close");
 // ==== gamburger click ====
 toggleMenu.addEventListener("click", function () {
@@ -21,6 +23,7 @@ overlay.addEventListener("click", function () {
     overlay.classList.remove("active");
     authorization.classList.remove("active");
     register.classList.remove("active");
+    popup_Mortgage.classList.remove("active");
     document.querySelector(".popup-calculate-cost").style.display = 'none';
 });
 login.addEventListener("click", function () {
@@ -38,4 +41,8 @@ calculationCost.addEventListener("click", function () {
 popupClose.addEventListener("click", function () {
     document.querySelector(".popup-calculate-cost").style.display = 'none';
     overlay.classList.remove("active");
+});
+link_Mortgage.addEventListener("click", function () {
+    popup_Mortgage.classList.toggle("active");
+    headerMenu.classList.remove("active");
 });

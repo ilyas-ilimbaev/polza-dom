@@ -72,7 +72,7 @@
                             <a href="/ourworks" class="header-menu-link">Наши работы</a>
                         </li>
                         <li class="header-menu-item">
-                            <a href="/" class="header-menu-link">Ипотека и кредит</a>
+                            <p class="header-menu-link link-item-mortgage">Ипотека и кредит</p>
                         </li>
                         <li class="header-menu-item header-menu-line"></li>
                         <li class="header-menu-item">

@@ -47,7 +47,6 @@
         </form>
     </div>
 </div>
-<div id="overlay" class="overlay"></div>
 <div class="popup-calculate-cost">
     <div class="popup-close"></div>
     <div class="popup-item-title">Какой стиль домов вам нравится?</div>
@@ -192,3 +191,34 @@
     </button>
     </div>
 </div>
+<div class="popup-mortgage">
+    <div class="section-title__wrapper">
+        <h2 class="section-title">Ипотека и кредит</h2>
+    </div>
+    <div class="popup-mortgage-content">
+        <div class="popup-mortgage__img-wrapper">
+            <img src="/img/popup-mortgage.jpg" alt="Ипотека и кредит" class="popup-mortgage__img">
+            <div class="popup-mortgage__img-text-wrapper">
+                <div class="popup-mortgage-item popup-mortgage__img-text">Ипотека с нами - легко и доступно!</div>
+                <div class="popup-mortgage-item popup-mortgage__img-text">ot 7,5%</div>
+            </div>
+        </div>
+        <div class="popup-mortgage__desc">
+            <h3 class="popup-mortgage-subtitle">С использованием ипотечных кредитов можно:</h3>
+            <ul class="popup-mortgage__list">
+                <li class="popup-mortgage__list-item list-style-type-circle">Приобрести жилой дом с земельным участком</li>
+                <li class="popup-mortgage__list-item list-style-type-circle">Осуществить строительство жилого дома</li>
+                <li class="popup-mortgage__list-item list-style-type-circle">Приобрести земельный участок, в т.ч. с целью последующего строительства на нем жилого дома</li>
+                <li class="popup-mortgage__list-item list-style-type-circle">Приобрести объект недвижимости с земельным участком на стадии строительства</li>
+            </ul>
+            <div class="popup-mortgage__item-container">
+                    <div class="popup-mortgage-item">кредит до</div>
+                <div class="popup-mortgage__item-wrapper">
+                    <div class="modified-text-bold">5 000 000 руб.</div>
+                    <button class="popup-mortgage-button send-btn">оставить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>

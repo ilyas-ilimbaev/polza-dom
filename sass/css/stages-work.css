@@ -112,15 +112,12 @@
 }
 .benefits-product__img {
   width: 598px;
-  height: 629px;
+  height: 633px;
+  object-position: 80%;
+  vertical-align: middle;
 }
 .benefits-product__img-box {
   flex-shrink: 0;
-}
-
-.item-modification-color {
-  font-weight: 500;
-  color: #57C54E;
 }
 
 @media (min-width: 1550px) {
@@ -161,5 +158,20 @@
     margin-top: 5px;
     font-size: 11px;
     line-height: 13px;
+  }
+  .benefits-product-container {
+    margin: auto;
+  }
+  .benefits-product__wrapper {
+    flex-direction: column;
+  }
+  .benefits-product__desc {
+    margin-right: 0;
+    padding: 35px 12px;
+  }
+  .benefits-product__img {
+    max-width: 396px;
+    width: 100%;
+    height: 379px;
   }
 }

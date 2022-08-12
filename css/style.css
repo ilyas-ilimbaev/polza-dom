@@ -99,6 +99,14 @@ img {
   display: inline-block;
 }
 
+.list-style-type-circle {
+  background-image: url(../img/list-style-type-inside.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-left: 2rem;
+}
+
 .search-input {
   display: flex;
   flex-direction: row;
@@ -176,6 +184,23 @@ img {
   height: 29px;
 }
 
+.send-btn {
+  display: inline-block;
+  padding: 19px 30px;
+  max-width: 236px;
+  height: 56px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #2D7439;
+  border: none;
+  border-radius: 55px;
+  outline: none;
+  cursor: pointer;
+}
+
 .section-title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -236,6 +261,18 @@ img {
   height: 16px;
   margin-right: 10px;
   background-image: url(../img/arrow-left.png);
+}
+
+.modified-item-color {
+  font-weight: 500;
+  color: #57C54E;
+}
+.modified-text-bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  color: #000;
 }
 
 @media (max-width: 396px) {
@@ -395,6 +432,7 @@ img {
 }
 .header-menu-link {
   position: relative;
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 27px;
@@ -618,21 +656,7 @@ img {
   width: 100%;
 }
 .reviews-form__submit {
-  display: inline-block;
-  padding: 18px 32px;
-  max-width: 236px;
-  height: 56;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background: #2D7439;
-  border: none;
-  border-radius: 55px;
-  outline: none;
-  cursor: pointer;
 }
 .reviews-input-name {
   max-width: 130px;
@@ -788,6 +812,7 @@ img {
   left: 0;
   top: 12px;
   z-index: 9;
+  /*block ipoteka/mortgage*/
 }
 .popup-wrapper {
   padding: 50px 66px 35px 66px;
@@ -954,6 +979,107 @@ img {
 }
 .popup-label__style-house {
   display: flex;
+}
+.popup-mortgage {
+  position: fixed;
+  margin: 0 auto;
+  padding: 70px 98px 98px 50px;
+  display: none;
+  top: 50%;
+  left: 0;
+  right: 0;
+  max-width: 1366px;
+  width: 100%;
+  z-index: 99999;
+  transform: translateY(-50%);
+  background: #FFFFFF;
+}
+.popup-mortgage.active {
+  display: block;
+}
+.popup-mortgage .section-title__wrapper {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #038E00;
+}
+.popup-mortgage .section-title__wrapper::before {
+  display: none;
+}
+.popup-mortgage-content {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup-mortgage__img {
+  width: 470px;
+  height: 517px;
+}
+.popup-mortgage__img-wrapper {
+  position: relative;
+  margin-right: 50px;
+}
+.popup-mortgage__img-wrapper::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.popup-mortgage__img-text:first-child {
+  margin-bottom: 30px;
+}
+.popup-mortgage__img-text-wrapper {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  z-index: 1;
+}
+.popup-mortgage__img-text-wrapper .popup-mortgage-item {
+  color: #fff;
+}
+.popup-mortgage__list {
+  margin-bottom: 30px;
+  padding: 30px 0;
+  border-bottom: 2px solid #000;
+}
+.popup-mortgage__list-item {
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #000;
+}
+.popup-mortgage__list-item:last-child {
+  margin-bottom: 0;
+}
+.popup-mortgage-item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #000;
+}
+.popup-mortgage__item-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-mortgage-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  color: #000;
+}
+.popup-mortgage-button {
+  font-weight: 500;
 }
 
 .socialNetworks-item {
@@ -1183,6 +1309,61 @@ img {
   fill: #fff;
 }
 
+@media (max-width: 396px) {
+  .popup-mortgage {
+    padding: 35px 20px;
+    top: 0;
+    transform: none;
+  }
+  .popup-mortgage .section-title__wrapper {
+    padding-bottom: 10px;
+  }
+  .popup-mortgage-content {
+    padding-top: 20px;
+    flex-direction: column-reverse;
+  }
+  .popup-mortgage__img {
+    width: 100%;
+    height: 323px;
+    vertical-align: middle;
+  }
+  .popup-mortgage__img-wrapper {
+    margin-top: 50px;
+    margin-right: 0;
+  }
+  .popup-mortgage__list {
+    padding: 0;
+    border: 0;
+  }
+  .popup-mortgage__list-item {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .popup-mortgage-item {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .popup-mortgage__item-wrapper {
+    margin-top: 10px;
+  }
+  .popup-mortgage-subtitle {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .popup-mortgage-button {
+    padding: 14px 14px;
+    height: initial;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.modified-text-bold {
+  font-size: 22px;
+  line-height: 32px;
+}
+
 .footer-text, .footer-hours {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -1402,8 +1583,8 @@ img {
     max-width: 330px;
   }
   .section-title {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 21px;
+    line-height: 26px;
   }
   .black-color {
     background-color: #2a2a2a;
