@@ -912,7 +912,7 @@ img {
   background: #F7F7F7;
   border-radius: 20px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 9;
 }
 .popup-item-title {
   font-family: "Montserrat", sans-serif;
